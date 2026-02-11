@@ -93,10 +93,10 @@ export default function QuizPage() {
     return <LoadingAnimation onComplete={handleLoadingComplete} />;
   }
 
-  // Safety check for index out of bounds
+  // Safety check for index out of bounds (but allow bonus question to show)
   const currentQuestion = questions[currentQuestionIndex];
-  if (!currentQuestion) {
-    return null; // Or a loading spinner/error state
+  if (!currentQuestion && !showBonus && !isCompleted) {
+    return null;
   }
 
   return (
