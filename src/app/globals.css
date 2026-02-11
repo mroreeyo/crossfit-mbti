@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon-green: #39FF14;
+  --neon-pink: #FF1493;
+  --neon-blue: #00D4FF;
+  --bg-dark: #0a0a0a;
+  --bg-card: #1a1a2e;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: white;
+}
+
+::selection {
+  background-color: var(--neon-green);
+  color: black;
+}
