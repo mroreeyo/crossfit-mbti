@@ -127,7 +127,7 @@ export async function GET(request: NextRequest) {
           &quot;{data.nickname}&quot;
         </div>
         <div style={{ fontSize: 20, color: '#9ca3af' }}>
-          나의 크로스핏 MBTI는? | crossfit-mbti.kr
+          나의 크로스핏 MBTI는? | crossfit-mbti.vercel.app
         </div>
       </div>
     ),
