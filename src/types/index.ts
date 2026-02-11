@@ -27,6 +27,8 @@ export interface MBTIResult {
   traits: [string, string, string];
   bestMove: string;
   worstMove: string;
+  bestWOD: string;
+  worstWOD: string;
   bestMatch: MBTIType;
   worstMatch: MBTIType;
   quote: string;

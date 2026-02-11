@@ -31,6 +31,7 @@ const itemVariants = {
 const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
   const router = useRouter();
   const resetQuiz = useQuizStore((state) => state.reset);
+  const bonusAnswer = useQuizStore((state) => state.bonusAnswer);
   const resultCardRef = React.useRef<HTMLDivElement>(null);
 
   React.useEffect(() => {
@@ -45,6 +46,18 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
 
   const bestMatchResult = getResultByType(result.bestMatch);
   const worstMatchResult = getResultByType(result.worstMatch);
+
+  const getBonusText = (answer: string | null) => {
+    switch (answer) {
+      case 'girl': return "Girl WOD (Fran, Grace...) — 짧지만 잔인하니까";
+      case 'hero': return "Hero WOD (Murph, DT...) — 끝이 안 보이니까";
+      case 'amrap': return "긴 AMRAP (20분+) — 시계가 안 가니까";
+      case 'cardio': return "순수 카디오 — 바벨을 들어야 크로스핏이지";
+      default: return null;
+    }
+  };
+
+  const bonusText = getBonusText(bonusAnswer);
 
   return (
     <motion.div 
@@ -110,6 +123,28 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
             <div className="font-semibold text-white">{result.worstMove}</div>
           </div>
         </motion.div>
+
+        {/* WODs */}
+        <motion.div variants={itemVariants} className="w-full grid grid-cols-2 gap-4 text-left">
+          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
+            <div className="text-sm text-gray-400 mb-1">💚 찰떡 WOD</div>
+            <div className="font-semibold text-white text-sm">{result.bestWOD}</div>
+          </div>
+          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
+            <div className="text-sm text-gray-400 mb-1">🖤 지옥 WOD</div>
+            <div className="font-semibold text-white text-sm">{result.worstWOD}</div>
+          </div>
+        </motion.div>
+
+        {/* Bonus Answer */}
+        {bonusText && (
+          <motion.div variants={itemVariants} className="w-full">
+            <div className="bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 text-left">
+              <div className="text-sm text-gray-400 mb-1">🚫 절대 안 하고 싶은 WOD</div>
+              <div className="font-semibold text-white">{bonusText}</div>
+            </div>
+          </motion.div>
+        )}
 
         {/* Matches */}
         <motion.div variants={itemVariants} className="w-full space-y-3">

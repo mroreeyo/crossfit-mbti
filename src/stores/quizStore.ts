@@ -8,8 +8,10 @@ export interface QuizStore {
   currentQuestionIndex: number;
   isCompleted: boolean;
   resultType: string | null;
+  bonusAnswer: string | null;
 
   answerQuestion: (answer: Answer) => void;
+  setBonusAnswer: (answer: string) => void;
   goToPrevious: () => void;
   reset: () => void;
   calculateResult: () => string;
@@ -20,6 +22,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
   currentQuestionIndex: 0,
   isCompleted: false,
   resultType: null,
+  bonusAnswer: null,
 
   answerQuestion: (answer: Answer) => {
     set((state) => {
@@ -33,6 +36,10 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
         isCompleted,
       };
     });
+  },
+
+  setBonusAnswer: (answer: string) => {
+    set({ bonusAnswer: answer });
   },
 
   goToPrevious: () => {
@@ -55,6 +62,7 @@ export const useQuizStore = create<QuizStore>((set, get) => ({
       currentQuestionIndex: 0,
       isCompleted: false,
       resultType: null,
+      bonusAnswer: null,
     });
   },
 
