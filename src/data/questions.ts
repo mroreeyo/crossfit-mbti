@@ -21,9 +21,9 @@ export const questions: Question[] = [
   },
   {
     id: 4,
-    question: '오늘의 WOD가 뭔지 궁금할 때?',
-    optionA: { text: '정해진 프로그램을 꾸준히 따르는 게 좋아', type: 'J' },
-    optionB: { text: '매일 다른 게 좋아, 변화가 재밌지', type: 'P' },
+    question: '내일 WOD가 뭔지 미리 알 수 있다면?',
+    optionA: { text: '당연히 확인하고 전략 짜놓지', type: 'J' },
+    optionB: { text: '모르는 게 더 재밌어, 가서 보면 됨', type: 'P' },
   },
   {
     id: 5,
@@ -33,9 +33,9 @@ export const questions: Question[] = [
   },
   {
     id: 6,
-    question: "보드에 'Murph' 적혀있는 거 봤을 때",
+    question: "보드에 'Murph' 적혀있는 거 봤을 때 (1마일+풀업100+푸시업200+스쿼트300+1마일)",
     optionA: { text: '오히려 좋아, 오늘 제대로 털어보자', type: 'S' },
-    optionB: { text: '20라운드... 이걸 언제 다 하지? 시뮬레이션 돌림', type: 'N' },
+    optionB: { text: '풀업100 푸시업200 스쿼트300... 이걸 언제 다 하지?', type: 'N' },
   },
   {
     id: 7,
@@ -46,7 +46,7 @@ export const questions: Question[] = [
   {
     id: 8,
     question: '알람 울렸는데 오늘 WOD가 쓰러스터...',
-    optionA: { text: '버피 30개 하더라도 일단 박스로 출발', type: 'J' },
+    optionA: { text: '쓰러스터든 뭐든 일단 박스로 출발', type: 'J' },
     optionB: { text: '이건 신의 계시다, 오늘은 휴식', type: 'P' },
   },
   {
@@ -69,7 +69,7 @@ export const questions: Question[] = [
   },
   {
     id: 12,
-    question: "같이 운동하던 형이 '로컬 대회 나가자' 할 때",
+    question: "같이 운동하던 지인이 '크로스핏 대회 나가자' 할 때",
     optionA: { text: 'D-day 잡고 바로 식단이랑 훈련 계획 짬', type: 'J' },
     optionB: { text: '오 재밌겠다! 근데 일단 오늘 WOD부터 하고', type: 'P' },
   },
