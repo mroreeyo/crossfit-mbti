@@ -39,7 +39,7 @@ export const questions: Question[] = [
   },
   {
     id: 7,
-    question: '나노 살 때 나는?',
+    question: '크로스핏 운동화 살 때 나는?',
     optionA: { text: '접지력, 쿠셔닝, 리뷰 싹 다 비교', type: 'T' },
     optionB: { text: '색깔 예쁘면 장땡, 일단 결제', type: 'F' },
   },
