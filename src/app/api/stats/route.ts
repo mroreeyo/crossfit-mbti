@@ -33,24 +33,24 @@ const ALL_MBTI_TYPES: readonly string[] = [
   'ENTJ',
 ];
 
-// Mock-first: realistic-ish distribution; total ~= 12,345.
+// Mock-first: no fake data when Supabase is not connected.
 const MOCK_COUNTS: Record<string, number> = {
-  ISTJ: 680,
-  ISFJ: 790,
-  INFJ: 820,
-  INTJ: 730,
-  ISTP: 640,
-  ISFP: 690,
-  INFP: 970,
-  INTP: 720,
-  ESTP: 770,
-  ESFP: 760,
-  ENFP: 1050,
-  ENTP: 880,
-  ESTJ: 710,
-  ESFJ: 680,
-  ENFJ: 740,
-  ENTJ: 715,
+  ISTJ: 0,
+  ISFJ: 0,
+  INFJ: 0,
+  INTJ: 0,
+  ISTP: 0,
+  ISFP: 0,
+  INFP: 0,
+  INTP: 0,
+  ESTP: 0,
+  ESFP: 0,
+  ENFP: 0,
+  ENTP: 0,
+  ESTJ: 0,
+  ESFJ: 0,
+  ENFJ: 0,
+  ENTJ: 0,
 };
 
 const buildMockStats = (): StatsResponse => {

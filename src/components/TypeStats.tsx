@@ -18,7 +18,7 @@ interface TypeStatsProps {
   currentType: string;
 }
 
-const FALLBACK_TOTAL = 12345;
+const FALLBACK_TOTAL = 0;
 
 const TypeStats: React.FC<TypeStatsProps> = ({ currentType }) => {
   const [stats, setStats] = useState<StatsResponse | null>(null);

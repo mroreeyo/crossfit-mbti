@@ -7,8 +7,9 @@ interface ParticipantCounterProps {
 }
 
 export default function ParticipantCounter({ count }: ParticipantCounterProps) {
-  const fallbackCount = 12345;
+  const fallbackCount = 0;
   const [participantCount, setParticipantCount] = useState<number>(count ?? fallbackCount);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     // 외부에서 count를 주입하는 경우 fetch 생략
@@ -27,6 +28,7 @@ export default function ParticipantCounter({ count }: ParticipantCounterProps) {
 
         if (typeof json.totalParticipants === 'number') {
           setParticipantCount(json.totalParticipants);
+          setIsLoaded(true);
         }
       } catch (error) {
         console.error('Failed to load participant count:', error);
@@ -40,7 +42,9 @@ export default function ParticipantCounter({ count }: ParticipantCounterProps) {
 
   return (
     <div className="mt-8 text-sm text-gray-500">
-      👥 {participantCount.toLocaleString()}명이 참여했어요!
+      {participantCount > 0
+        ? `👥 ${participantCount.toLocaleString()}명이 참여했어요!`
+        : '👥 지금 바로 첫 번째 참여자가 되어보세요!'}
     </div>
   );
 }
