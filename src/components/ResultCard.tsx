@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { MBTIResult } from '@/types';
 import { getResultByType } from '@/data/results';
@@ -72,12 +73,19 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
         {/* Header */}
         <div className="space-y-2">
           <motion.h2 variants={itemVariants} className="text-lg text-gray-400 font-medium">나의 크로스핏 MBTI는...</motion.h2>
-          <motion.div variants={itemVariants} className="text-7xl py-4">
+          <motion.div variants={itemVariants} className="w-48 h-48 md:w-56 md:h-56 relative mx-auto my-4">
             <motion.div
               animate={{ y: [0, -10, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             >
-              {result.emoji}
+              <Image
+                src={result.characterImage}
+                alt={`${result.type} - ${result.nickname}`}
+                width={224}
+                height={224}
+                className="rounded-2xl shadow-lg object-cover"
+                priority
+              />
             </motion.div>
           </motion.div>
           <motion.h1 
