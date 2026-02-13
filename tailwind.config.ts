@@ -15,9 +15,9 @@ const config: Config = {
           blue: '#00D4FF',
         },
         dark: {
-          DEFAULT: '#0a0a0a',
-          card: '#1a1a2e',
-          lighter: '#16213e',
+          DEFAULT: '#f8fafc',
+          card: '#ffffff',
+          lighter: '#f1f5f9',
         },
       },
       keyframes: {

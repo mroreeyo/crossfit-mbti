@@ -6,16 +6,16 @@
   --neon-green: #39FF14;
   --neon-pink: #FF1493;
   --neon-blue: #00D4FF;
-  --bg-dark: #0a0a0a;
-  --bg-card: #1a1a2e;
+  --bg-dark: #f8fafc;
+  --bg-card: #ffffff;
 }
 
 body {
   background-color: var(--bg-dark);
-  color: white;
+  color: #1e293b;
 }
 
 ::selection {
   background-color: var(--neon-green);
-  color: black;
+  color: white;
 }

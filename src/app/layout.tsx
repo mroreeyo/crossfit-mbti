@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
-      <body className={`${notoSansKr.className} bg-gray-950 text-white antialiased`}>
+      <body className={`${notoSansKr.className} bg-slate-50 text-slate-900 antialiased`}>
         {/* GA4 */}
         {process.env.NEXT_PUBLIC_GA_ID && process.env.NEXT_PUBLIC_GA_ID !== 'mock_ga_id' && (
           <>
