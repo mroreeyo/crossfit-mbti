@@ -14,7 +14,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ENFP',
     worstMatch: 'ESFP',
     quote: '"기록 안 하면 안 한 거야."',
-    characterImage: '/images/characters/ISTJ.png',
+    characterImage: '/images/characters/ISTJ.webp',
     color: '#4ECDC4',
   },
   {
@@ -30,7 +30,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ENTP',
     worstMatch: 'ENTJ',
     quote: '"다들 다치지 말고 파이팅!"',
-    characterImage: '/images/characters/ISFJ.png',
+    characterImage: '/images/characters/ISFJ.webp',
     color: '#FF6B9D',
   },
   {
@@ -46,7 +46,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ESTP',
     worstMatch: 'ESTJ',
     quote: '"오늘의 고통은 내일의 깨달음입니다."',
-    characterImage: '/images/characters/INFJ.png',
+    characterImage: '/images/characters/INFJ.webp',
     color: '#C084FC',
   },
   {
@@ -62,7 +62,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ESFP',
     worstMatch: 'ENFP',
     quote: '"효율이 전부다."',
-    characterImage: '/images/characters/INTJ.png',
+    characterImage: '/images/characters/INTJ.webp',
     color: '#22D3EE',
   },
   {
@@ -78,7 +78,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ENFJ',
     worstMatch: 'ESFJ',
     quote: '"말할 시간에 하나 더 함."',
-    characterImage: '/images/characters/ISTP.png',
+    characterImage: '/images/characters/ISTP.webp',
     color: '#A3E635',
   },
   {
@@ -94,7 +94,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ENTJ',
     worstMatch: 'ENTP',
     quote: '"운동도 예쁘게 해야 잘 됨."',
-    characterImage: '/images/characters/ISFP.png',
+    characterImage: '/images/characters/ISFP.webp',
     color: '#FB923C',
   },
   {
@@ -110,7 +110,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ESTJ',
     worstMatch: 'ESTP',
     quote: '"우리 팀워크 정말 최고였어요."',
-    characterImage: '/images/characters/INFP.png',
+    characterImage: '/images/characters/INFP.webp',
     color: '#F472B6',
   },
   {
@@ -126,7 +126,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ESFJ',
     worstMatch: 'ENFJ',
     quote: '"이론상으로는 이게 맞는데..."',
-    characterImage: '/images/characters/INTP.png',
+    characterImage: '/images/characters/INTP.webp',
     color: '#60A5FA',
   },
   {
@@ -142,7 +142,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'INFJ',
     worstMatch: 'INFP',
     quote: '"안 되면 되게 하라!"',
-    characterImage: '/images/characters/ESTP.png',
+    characterImage: '/images/characters/ESTP.webp',
     color: '#EF4444',
   },
   {
@@ -158,7 +158,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'INTJ',
     worstMatch: 'ISTJ',
     quote: '"즐겁지 않으면 크로스핏이 아니지!"',
-    characterImage: '/images/characters/ESFP.png',
+    characterImage: '/images/characters/ESFP.webp',
     color: '#FBBF24',
   },
   {
@@ -174,7 +174,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ISTJ',
     worstMatch: 'INTJ',
     quote: '"오늘도 한계를 돌파합시다!"',
-    characterImage: '/images/characters/ENFP.png',
+    characterImage: '/images/characters/ENFP.webp',
     color: '#F97316',
   },
   {
@@ -190,7 +190,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ISFJ',
     worstMatch: 'ISFP',
     quote: '"노 렙(No Rep)도 전략이다."',
-    characterImage: '/images/characters/ENTP.png',
+    characterImage: '/images/characters/ENTP.webp',
     color: '#34D399',
   },
   {
@@ -206,7 +206,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'INFP',
     worstMatch: 'INFJ',
     quote: '"정직하게 합시다, 정직하게."',
-    characterImage: '/images/characters/ESTJ.png',
+    characterImage: '/images/characters/ESTJ.webp',
     color: '#6366F1',
   },
   {
@@ -222,7 +222,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'INTP',
     worstMatch: 'ISTP',
     quote: '"운동 끝나고 고기 먹으러 갈 사람?"',
-    characterImage: '/images/characters/ESFJ.png',
+    characterImage: '/images/characters/ESFJ.webp',
     color: '#EC4899',
   },
   {
@@ -238,7 +238,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ISTP',
     worstMatch: 'INTP',
     quote: '"할 수 있어요! 한 개만 더!"',
-    characterImage: '/images/characters/ENFJ.png',
+    characterImage: '/images/characters/ENFJ.webp',
     color: '#8B5CF6',
   },
   {
@@ -254,7 +254,7 @@ export const results: MBTIResult[] = [
     bestMatch: 'ISFP',
     worstMatch: 'ISFJ',
     quote: '"박스 수익성 개선이 시급합니다."',
-    characterImage: '/images/characters/ENTJ.png',
+    characterImage: '/images/characters/ENTJ.webp',
     color: '#14B8A6',
   },
 ];

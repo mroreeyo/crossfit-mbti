@@ -83,6 +83,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
                 alt={`${result.type} - ${result.nickname}`}
                 width={224}
                 height={224}
+                sizes="(max-width: 768px) 192px, 224px"
                 className="rounded-2xl shadow-lg object-cover"
                 priority
               />
