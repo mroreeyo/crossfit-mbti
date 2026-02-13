@@ -4,8 +4,8 @@ export const questions: Question[] = [
   {
     id: 1,
     question: '워밍업 시간, 나는?',
-    optionA: { text: '옆 사람이랑 어제 WOD 얘기하며 입운동', type: 'E' },
-    optionB: { text: '구석에서 혼자 폼롤러랑 대화 중', type: 'I' },
+    optionA: { text: '옆 사람이랑 수다 떨면서 스트레칭', type: 'E' },
+    optionB: { text: '구석에서 혼자 폼롤러 굴리는 중', type: 'I' },
   },
   {
     id: 2,
@@ -27,15 +27,15 @@ export const questions: Question[] = [
   },
   {
     id: 5,
-    question: '드디어 PR 깼다!! 나는?',
+    question: '드디어 자기 기록 갱신!! 나는?',
     optionA: { text: '박스 떠나가라 소리 지르고 인스타 박제', type: 'E' },
     optionB: { text: '조용히 칠판에 적고 혼자 흐뭇', type: 'I' },
   },
   {
     id: 6,
-    question: "보드에 'Murph' 적혀있는 거 봤을 때 (1마일+풀업100+푸시업200+스쿼트300+1마일)",
+    question: "보드에 오늘의 WOD가 풀업100 + 푸시업200 + 스쿼트300 이라고 적혀있을 때",
     optionA: { text: '오히려 좋아, 오늘 제대로 털어보자', type: 'S' },
-    optionB: { text: '풀업100 푸시업200 스쿼트300... 이걸 언제 다 하지?', type: 'N' },
+    optionB: { text: '총 600개... 어떻게 나눠서 할지 머리부터 굴림', type: 'N' },
   },
   {
     id: 7,
@@ -71,6 +71,6 @@ export const questions: Question[] = [
     id: 12,
     question: "같이 운동하던 지인이 '크로스핏 대회 나가자' 할 때",
     optionA: { text: 'D-day 잡고 바로 식단이랑 훈련 계획 짬', type: 'J' },
-    optionB: { text: '오 재밌겠다! 근데 일단 오늘 WOD부터 하고', type: 'P' },
+    optionB: { text: '아 ㅋㅋ 생각해볼게~ 하고 흐지부지', type: 'P' },
   },
 ];
