@@ -14,11 +14,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
 export const metadata: Metadata = {
   title: '나의 크로스핏 MBTI 테스트 | 크로스핏 유형 찾기',
   description:
-    '12가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형! 친구와 함께 테스트하고 결과를 공유해보세요.',
+    '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형! 친구와 함께 테스트하고 결과를 공유해보세요.',
   keywords: ['크로스핏', 'MBTI', '테스트', '크로스핏MBTI', 'WOD', '성격유형'],
   openGraph: {
     title: '나의 크로스핏 MBTI 테스트',
-    description: '12가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
+    description: '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
     url: siteUrl,
     type: 'website',
     locale: 'ko_KR',
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: '나의 크로스핏 MBTI 테스트',
-    description: '12가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
+    description: '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
     images: [`${siteUrl}/api/og`],
   },
 };

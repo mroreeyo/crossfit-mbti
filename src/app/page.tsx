@@ -39,7 +39,7 @@ export default function Home() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}
         >
-          12가지 질문으로 알아보는<br />
+          16가지 질문으로 알아보는<br />
           나만의 크로스핏 MBTI
         </motion.p>
         

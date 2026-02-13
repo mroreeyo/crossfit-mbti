@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
             나의 크로스핏 MBTI는?
           </div>
           <div style={{ fontSize: 24, color: '#64748b' }}>
-            12가지 질문으로 알아보는 나만의 크로스핏 MBTI
+            16가지 질문으로 알아보는 나만의 크로스핏 MBTI
           </div>
         </div>
       ),
