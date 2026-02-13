@@ -39,13 +39,13 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
   if (sliderData) {
     return (
       <div className="w-full max-w-2xl mx-auto">
-        <div className="bg-dark-card border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl mb-8">
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed text-center">
+        <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-xl mb-8">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 leading-relaxed text-center">
             Q{question.id}. {question.question}
           </h2>
 
           <div className="space-y-8 py-4">
-            <div className="flex justify-between items-center text-lg font-medium text-gray-300 px-2">
+            <div className="flex justify-between items-center text-lg font-medium text-gray-600 px-2">
               <div className="flex flex-col items-center gap-2">
                 <span className="text-4xl">{sliderData.leftEmoji}</span>
                 <span>{sliderData.leftLabel}</span>
@@ -64,11 +64,11 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
                 value={sliderValue}
                 onChange={(e) => setSliderValue(Number(e.target.value))}
                 disabled={disabled}
-                className="w-full h-4 bg-gray-700 rounded-lg appearance-none cursor-pointer accent-neon-green hover:accent-neon-pink transition-colors"
+                className="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-500 hover:accent-pink-500 transition-colors"
               />
             </div>
 
-            <div className="text-center text-gray-400 text-sm">
+            <div className="text-center text-gray-500 text-sm">
               {sliderValue < 50 ? question.optionA.text : question.optionB.text}
             </div>
 
@@ -80,8 +80,8 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
               className={`
                 w-full py-4 rounded-xl font-bold text-lg transition-all duration-200
                 ${disabled 
-                  ? 'bg-gray-800 text-gray-500 cursor-not-allowed' 
-                  : 'bg-neon-green text-black hover:bg-neon-pink hover:text-white shadow-lg hover:shadow-neon-pink/50'
+                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
+                  : 'bg-emerald-500 text-white hover:bg-pink-500 hover:text-white shadow-lg hover:shadow-pink-500/30'
                 }
               `}
             >
@@ -95,8 +95,8 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="bg-dark-card border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl mb-8">
-        <h2 className="text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed text-center">
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-xl mb-8">
+        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 leading-relaxed text-center">
           Q{question.id}. {question.question}
         </h2>
 
@@ -109,8 +109,8 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
             className={`
               w-full text-left p-6 rounded-xl border-2 transition-colors duration-200 group relative overflow-hidden
               ${disabled 
-                ? 'border-gray-800 bg-gray-900/50 opacity-50 cursor-not-allowed' 
-                : 'border-gray-700 bg-dark-lighter hover:border-neon-green hover:shadow-[0_0_15px_rgba(57,255,20,0.3)]'
+                ? 'border-gray-200 bg-gray-100 opacity-50 cursor-not-allowed' 
+                : 'border-gray-200 bg-slate-50 hover:border-emerald-500 hover:shadow-[0_0_15px_rgba(16,185,129,0.2)]'
               }
             `}
           >
@@ -120,18 +120,18 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
               ) : (
                 <span className={`
                   font-bold text-lg
-                  ${disabled ? 'text-gray-600' : 'text-neon-green group-hover:text-white transition-colors'}
+                  ${disabled ? 'text-gray-400' : 'text-emerald-600 group-hover:text-emerald-700 transition-colors'}
                 `}>
                   A.
                 </span>
               )}
-              <span className="text-gray-200 font-medium text-lg leading-snug">
+              <span className="text-slate-700 font-medium text-lg leading-snug">
                 {question.optionA.text}
               </span>
             </div>
             {/* Hover effect background fill */}
             {!disabled && (
-              <div className="absolute inset-0 bg-neon-green/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <div className="absolute inset-0 bg-emerald-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             )}
           </motion.button>
 
@@ -143,8 +143,8 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
             className={`
               w-full text-left p-6 rounded-xl border-2 transition-colors duration-200 group relative overflow-hidden
               ${disabled 
-                ? 'border-gray-800 bg-gray-900/50 opacity-50 cursor-not-allowed' 
-                : 'border-gray-700 bg-dark-lighter hover:border-neon-pink hover:shadow-[0_0_15px_rgba(255,20,147,0.3)]'
+                ? 'border-gray-200 bg-gray-100 opacity-50 cursor-not-allowed' 
+                : 'border-gray-200 bg-slate-50 hover:border-pink-500 hover:shadow-[0_0_15px_rgba(236,72,153,0.2)]'
               }
             `}
           >
@@ -154,18 +154,18 @@ export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps
               ) : (
                 <span className={`
                   font-bold text-lg
-                  ${disabled ? 'text-gray-600' : 'text-neon-pink group-hover:text-white transition-colors'}
+                  ${disabled ? 'text-gray-400' : 'text-pink-500 group-hover:text-pink-600 transition-colors'}
                 `}>
                   B.
                 </span>
               )}
-              <span className="text-gray-200 font-medium text-lg leading-snug">
+              <span className="text-slate-700 font-medium text-lg leading-snug">
                 {question.optionB.text}
               </span>
             </div>
             {/* Hover effect background fill */}
             {!disabled && (
-              <div className="absolute inset-0 bg-neon-pink/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+              <div className="absolute inset-0 bg-pink-500/5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
             )}
           </motion.button>
         </div>

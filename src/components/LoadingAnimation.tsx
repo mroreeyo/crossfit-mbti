@@ -17,7 +17,7 @@ export default function LoadingAnimation({ onComplete }: LoadingAnimationProps) 
   }, [onComplete]);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-dark text-white p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 text-slate-900 p-4">
       <div className="relative mb-8">
         {/* Barbell Animation */}
         <motion.div 
@@ -38,7 +38,7 @@ export default function LoadingAnimation({ onComplete }: LoadingAnimationProps) 
       </motion.h2>
       
       <motion.p 
-        className="text-gray-400 text-center max-w-xs mx-auto"
+        className="text-gray-500 text-center max-w-xs mx-auto"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}

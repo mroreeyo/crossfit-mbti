@@ -20,13 +20,13 @@ const BONUS_QUESTION = {
 export default function BonusQuestion({ onAnswer }: BonusQuestionProps) {
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="bg-dark-card border border-gray-800 rounded-2xl p-6 md:p-10 shadow-2xl mb-8 relative overflow-hidden">
+      <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-xl mb-8 relative overflow-hidden">
         {/* Bonus Badge */}
-        <div className="absolute top-4 right-4 bg-neon-pink text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
+        <div className="absolute top-4 right-4 bg-pink-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
           BONUS!
         </div>
 
-        <h2 className="text-xl md:text-2xl font-bold text-white mb-8 leading-relaxed text-center">
+        <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 leading-relaxed text-center">
           {BONUS_QUESTION.question}
         </h2>
 
@@ -37,16 +37,16 @@ export default function BonusQuestion({ onAnswer }: BonusQuestionProps) {
               onClick={() => onAnswer(option.id)}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full text-left p-5 rounded-xl border-2 border-gray-700 bg-dark-lighter hover:border-neon-pink hover:shadow-[0_0_15px_rgba(255,20,147,0.3)] transition-all duration-200 group relative overflow-hidden"
+              className="w-full text-left p-5 rounded-xl border-2 border-gray-200 bg-slate-50 hover:border-pink-500 hover:shadow-[0_0_15px_rgba(236,72,153,0.2)] transition-all duration-200 group relative overflow-hidden"
             >
               <div className="flex items-center gap-4 relative z-10">
                 <span className="text-2xl">{option.text.split(' ')[0]}</span>
-                <span className="text-gray-200 font-medium text-lg leading-snug group-hover:text-white transition-colors">
+                <span className="text-slate-700 font-medium text-lg leading-snug group-hover:text-slate-900 transition-colors">
                   {option.text.substring(option.text.indexOf(' ') + 1)}
                 </span>
               </div>
               {/* Hover effect background fill */}
-              <div className="absolute inset-0 bg-neon-pink/10 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
+              <div className="absolute inset-0 bg-pink-500/5 translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-300 ease-out" />
             </motion.button>
           ))}
         </div>
