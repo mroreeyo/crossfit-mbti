@@ -30,11 +30,11 @@ export default function Home() {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           크로스핏 할 때<br />
-          나는 <span className="text-neon-green">어떤 유형</span>일까?
+          나는 <span className="text-emerald-600">어떤 유형</span>일까?
         </motion.h1>
         
         <motion.p 
-          className="text-lg text-gray-400 mb-12"
+          className="text-lg text-gray-600 mb-12"
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.5 }}

@@ -55,7 +55,7 @@ export default function ResultPage({ params }: { params: { type: string } }) {
   }
 
   return (
-    <main className="min-h-screen bg-dark-bg text-white py-12 px-4 flex flex-col items-center justify-center">
+    <main className="min-h-screen bg-slate-50 text-slate-900 py-12 px-4 flex flex-col items-center justify-center">
       <ResultCard result={result} />
 
       <TypeStats currentType={result.type} />

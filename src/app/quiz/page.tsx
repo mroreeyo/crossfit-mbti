@@ -100,11 +100,11 @@ export default function QuizPage() {
   }
 
   return (
-    <main className="min-h-screen bg-dark text-white flex flex-col items-center justify-center p-4 relative overflow-hidden">
+    <main className="min-h-screen bg-slate-50 text-slate-900 flex flex-col items-center justify-center p-4 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-neon-green/5 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-neon-pink/5 rounded-full blur-[100px]" />
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/5 rounded-full blur-[100px]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-pink-500/5 rounded-full blur-[100px]" />
       </div>
 
       <div className="w-full max-w-2xl z-10">
@@ -121,12 +121,12 @@ export default function QuizPage() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="flex flex-col items-center justify-center text-center py-12 space-y-6 bg-dark-card rounded-2xl border border-gray-800 shadow-2xl"
+                className="flex flex-col items-center justify-center text-center py-12 space-y-6 bg-white rounded-2xl border border-gray-200 shadow-xl"
               >
                 <div className="text-6xl animate-bounce">{feedbackData.emoji}</div>
                 <div className="space-y-2">
-                  <h2 className="text-2xl font-bold text-white">{feedbackData.title}</h2>
-                  <p className="text-gray-400">{feedbackData.subtitle}</p>
+                  <h2 className="text-2xl font-bold text-slate-900">{feedbackData.title}</h2>
+                  <p className="text-gray-500">{feedbackData.subtitle}</p>
                 </div>
               </motion.div>
             ) : showBonus ? (
