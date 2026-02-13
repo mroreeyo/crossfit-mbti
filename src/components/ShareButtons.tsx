@@ -130,7 +130,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
           <button
             type="button"
             onClick={handleShareToKakao}
-            className="flex items-center gap-2 rounded-xl border border-gray-700 bg-dark-card px-3 py-2 text-sm text-white transition hover:border-gray-500 hover:bg-gray-800/40"
+            className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
           >
             <span aria-hidden>💬</span>
             <span>카카오톡</span>
@@ -140,7 +140,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
         <button
           type="button"
           onClick={handleShareToX}
-          className="flex items-center gap-2 rounded-xl border border-gray-700 bg-dark-card px-3 py-2 text-sm text-white transition hover:border-gray-500 hover:bg-gray-800/40"
+          className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>𝕏</span>
           <span>X</span>
@@ -149,7 +149,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
         <button
           type="button"
           onClick={handleCopyLink}
-          className="flex items-center gap-2 rounded-xl border border-gray-700 bg-dark-card px-3 py-2 text-sm text-white transition hover:border-gray-500 hover:bg-gray-800/40"
+          className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>🔗</span>
           <span>링크</span>
@@ -158,7 +158,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
         <button
           type="button"
           onClick={handleSaveImage}
-          className="flex items-center gap-2 rounded-xl border border-gray-700 bg-dark-card px-3 py-2 text-sm text-white transition hover:border-gray-500 hover:bg-gray-800/40"
+          className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>📸</span>
           <span>이미지</span>
@@ -167,7 +167,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
         <button
           type="button"
           onClick={handleInstagram}
-          className="flex items-center gap-2 rounded-xl border border-gray-700 bg-dark-card px-3 py-2 text-sm text-white transition hover:border-gray-500 hover:bg-gray-800/40"
+          className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>📷</span>
           <span>인스타</span>

@@ -62,7 +62,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
 
   return (
     <motion.div 
-      className="w-full max-w-lg mx-auto bg-dark-card rounded-2xl shadow-2xl overflow-hidden border border-gray-800"
+      className="w-full max-w-lg mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -72,7 +72,7 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
         
         {/* Header */}
         <div className="space-y-2">
-          <motion.h2 variants={itemVariants} className="text-lg text-gray-400 font-medium">나의 크로스핏 MBTI는...</motion.h2>
+          <motion.h2 variants={itemVariants} className="text-lg text-gray-500 font-medium">나의 크로스핏 MBTI는...</motion.h2>
           <motion.div variants={itemVariants} className="w-48 h-48 md:w-56 md:h-56 relative mx-auto my-4">
             <motion.div
               animate={{ y: [0, -10, 0] }}
@@ -95,24 +95,24 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
           >
             {result.type}
           </motion.h1>
-          <motion.div variants={itemVariants} className="text-2xl font-semibold text-white">
+          <motion.div variants={itemVariants} className="text-2xl font-semibold text-slate-900">
             &quot;{result.nickname}&quot;
           </motion.div>
         </div>
 
         {/* Description */}
-        <motion.p variants={itemVariants} className="text-gray-300 leading-relaxed">
+        <motion.p variants={itemVariants} className="text-gray-600 leading-relaxed">
           {result.description}
         </motion.p>
 
-        <motion.div variants={itemVariants} className="w-full h-px bg-gray-700 my-4" />
+        <motion.div variants={itemVariants} className="w-full h-px bg-gray-200 my-4" />
 
         {/* Traits */}
         <motion.div variants={itemVariants} className="w-full text-left space-y-3">
-          <h3 className="text-lg font-semibold text-white mb-2">📌 특징</h3>
+          <h3 className="text-lg font-semibold text-slate-900 mb-2">📌 특징</h3>
           <ul className="space-y-2">
             {result.traits.map((trait, index) => (
-              <li key={index} className="flex items-start text-gray-300">
+              <li key={index} className="flex items-start text-gray-600">
                 <span className="mr-2" style={{ color: result.color }}>•</span>
                 {trait}
               </li>
@@ -122,71 +122,71 @@ const ResultCard: React.FC<ResultCardProps> = ({ result }) => {
 
         {/* Moves */}
         <motion.div variants={itemVariants} className="w-full grid grid-cols-2 gap-4 text-left">
-          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-            <div className="text-sm text-gray-400 mb-1">💪 좋아하는 동작</div>
-            <div className="font-semibold text-white">{result.bestMove}</div>
+          <div className="bg-gray-50 p-4 rounded-xl border border-gray-200">
+            <div className="text-sm text-gray-500 mb-1">💪 좋아하는 동작</div>
+            <div className="font-semibold text-slate-900">{result.bestMove}</div>
           </div>
-          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-            <div className="text-sm text-gray-400 mb-1">😫 싫어하는 동작</div>
-            <div className="font-semibold text-white">{result.worstMove}</div>
+          <div className="bg-gray-50 p-4 rounded-xl border border-gray-200">
+            <div className="text-sm text-gray-500 mb-1">😫 싫어하는 동작</div>
+            <div className="font-semibold text-slate-900">{result.worstMove}</div>
           </div>
         </motion.div>
 
         {/* WODs */}
         <motion.div variants={itemVariants} className="w-full grid grid-cols-2 gap-4 text-left">
-          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-            <div className="text-sm text-gray-400 mb-1">💚 찰떡 WOD</div>
-            <div className="font-semibold text-white text-sm">{result.bestWOD}</div>
+          <div className="bg-gray-50 p-4 rounded-xl border border-gray-200">
+            <div className="text-sm text-gray-500 mb-1">💚 찰떡 WOD</div>
+            <div className="font-semibold text-slate-900 text-sm">{result.bestWOD}</div>
           </div>
-          <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-            <div className="text-sm text-gray-400 mb-1">🖤 지옥 WOD</div>
-            <div className="font-semibold text-white text-sm">{result.worstWOD}</div>
+          <div className="bg-gray-50 p-4 rounded-xl border border-gray-200">
+            <div className="text-sm text-gray-500 mb-1">🖤 지옥 WOD</div>
+            <div className="font-semibold text-slate-900 text-sm">{result.worstWOD}</div>
           </div>
         </motion.div>
 
         {/* Bonus Answer */}
         {bonusText && (
           <motion.div variants={itemVariants} className="w-full">
-            <div className="bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 text-left">
-              <div className="text-sm text-gray-400 mb-1">🚫 절대 안 하고 싶은 WOD</div>
-              <div className="font-semibold text-white">{bonusText}</div>
+            <div className="bg-gray-50 p-4 rounded-xl border border-gray-200 text-left">
+              <div className="text-sm text-gray-500 mb-1">🚫 절대 안 하고 싶은 WOD</div>
+              <div className="font-semibold text-slate-900">{bonusText}</div>
             </div>
           </motion.div>
         )}
 
         {/* Matches */}
         <motion.div variants={itemVariants} className="w-full space-y-3">
-          <div className="flex items-center justify-between bg-gray-800/30 p-3 rounded-xl border border-gray-700/50">
+          <div className="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-200">
             <div className="flex items-center gap-2">
               <span className="text-xl">💕</span>
-              <span className="text-sm text-gray-300">찰떡궁합</span>
+              <span className="text-sm text-gray-600">찰떡궁합</span>
             </div>
             <div className="text-right">
-              <span className="font-bold text-neon-pink mr-2">{result.bestMatch}</span>
-              <span className="text-xs text-gray-400 block">{bestMatchResult?.nickname}</span>
+              <span className="font-bold text-pink-500 mr-2">{result.bestMatch}</span>
+              <span className="text-xs text-gray-500 block">{bestMatchResult?.nickname}</span>
             </div>
           </div>
           
-          <div className="flex items-center justify-between bg-gray-800/30 p-3 rounded-xl border border-gray-700/50">
+          <div className="flex items-center justify-between bg-gray-50 p-3 rounded-xl border border-gray-200">
             <div className="flex items-center gap-2">
               <span className="text-xl">💥</span>
-              <span className="text-sm text-gray-300">환장조합</span>
+              <span className="text-sm text-gray-600">환장조합</span>
             </div>
             <div className="text-right">
-              <span className="font-bold text-gray-400 mr-2">{result.worstMatch}</span>
-              <span className="text-xs text-gray-500 block">{worstMatchResult?.nickname}</span>
+              <span className="font-bold text-gray-500 mr-2">{result.worstMatch}</span>
+              <span className="text-xs text-gray-400 block">{worstMatchResult?.nickname}</span>
             </div>
           </div>
         </motion.div>
 
         {/* Quote */}
         <motion.div variants={itemVariants} className="w-full py-4">
-          <p className="text-lg italic font-serif text-gray-400">
+          <p className="text-lg italic font-serif text-gray-500">
             {result.quote}
           </p>
         </motion.div>
 
-        <motion.div variants={itemVariants} className="w-full h-px bg-gray-700 my-2" />
+        <motion.div variants={itemVariants} className="w-full h-px bg-gray-200 my-2" />
 
         {/* Share Placeholder (Task 8) */}
         <motion.div variants={itemVariants} className="w-full py-2">

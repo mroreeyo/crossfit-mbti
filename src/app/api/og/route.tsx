@@ -56,8 +56,8 @@ export async function GET(request: NextRequest) {
             justifyContent: 'center',
             width: '100%',
             height: '100%',
-            backgroundColor: '#0a0a0a',
-            color: 'white',
+            backgroundColor: '#f8fafc',
+            color: '#1e293b',
             fontFamily: '"Noto Sans KR", sans-serif',
           }}
         >
@@ -65,7 +65,7 @@ export async function GET(request: NextRequest) {
           <div style={{ fontSize: 48, fontWeight: 'bold', marginBottom: 16 }}>
             나의 크로스핏 MBTI는?
           </div>
-          <div style={{ fontSize: 24, color: '#9ca3af' }}>
+          <div style={{ fontSize: 24, color: '#64748b' }}>
             12가지 질문으로 알아보는 나만의 크로스핏 MBTI
           </div>
         </div>
@@ -99,8 +99,8 @@ export async function GET(request: NextRequest) {
           justifyContent: 'center',
           width: '100%',
           height: '100%',
-          backgroundColor: '#0a0a0a',
-          color: 'white',
+          backgroundColor: '#f8fafc',
+          color: '#1e293b',
           fontFamily: '"Noto Sans KR", sans-serif',
           position: 'relative',
         }}
@@ -126,7 +126,7 @@ export async function GET(request: NextRequest) {
         <div style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 32 }}>
           &quot;{data.nickname}&quot;
         </div>
-        <div style={{ fontSize: 20, color: '#9ca3af' }}>
+        <div style={{ fontSize: 20, color: '#64748b' }}>
           나의 크로스핏 MBTI는? | crossfit-mbti.vercel.app
         </div>
       </div>

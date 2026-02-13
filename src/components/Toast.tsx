@@ -26,7 +26,7 @@ const Toast: React.FC<ToastProps> = ({ message, isVisible, onClose }) => {
           transition={{ duration: 0.18 }}
           className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 px-4"
         >
-          <div className="max-w-[92vw] rounded-xl border border-neon-green/60 bg-black/80 px-4 py-3 text-sm text-white shadow-[0_0_0_1px_rgba(57,255,20,0.12),0_12px_40px_rgba(0,0,0,0.55)] backdrop-blur">
+          <div className="max-w-[92vw] rounded-xl border border-emerald-500/60 bg-white/90 px-4 py-3 text-sm text-slate-900 shadow-[0_0_0_1px_rgba(16,185,129,0.12),0_12px_40px_rgba(0,0,0,0.15)] backdrop-blur">
             {message}
           </div>
         </motion.div>
