@@ -63,11 +63,13 @@ export default function QuizPage() {
 
       const nextIndex = currentQuestionIndex + 1;
 
-      if (nextIndex === 4 || nextIndex === 8) {
-        setFeedbackData(nextIndex === 4 
-          ? { emoji: '🏋️', title: '1라운드 클리어!', subtitle: '벌써 감이 오는데... 당신, 혹시 AMRAP 좋아해요?' }
-          : { emoji: '🔥', title: '2라운드 클리어! 거의 다 왔어요', subtitle: '지금까지 보면... 당신 박스에서 꽤 존재감 있는 편?' }
-        );
+      if (nextIndex === 4 || nextIndex === 8 || nextIndex === 12) {
+        const feedbacks = {
+          4: { emoji: '🏋️', title: '1라운드 클리어!', subtitle: '벌써 감이 오는데... 당신, 혹시 AMRAP 좋아해요?' },
+          8: { emoji: '🔥', title: '2라운드 클리어!', subtitle: '지금까지 보면... 당신 박스에서 꽤 존재감 있는 편?' },
+          12: { emoji: '💪', title: '파이널 라운드!', subtitle: '마지막 4문항! 끝까지 가보자고 🔥' },
+        };
+        setFeedbackData(feedbacks[nextIndex as keyof typeof feedbacks]);
         setShowFeedback(true);
         
         setTimeout(() => {

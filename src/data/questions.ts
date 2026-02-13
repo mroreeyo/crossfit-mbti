@@ -33,9 +33,9 @@ export const questions: Question[] = [
   },
   {
     id: 6,
-    question: "보드에 오늘의 WOD가 풀업100 + 푸시업200 + 스쿼트300 이라고 적혀있을 때",
-    optionA: { text: '오히려 좋아, 오늘 제대로 털어보자', type: 'S' },
-    optionB: { text: '총 600개... 어떻게 나눠서 할지 머리부터 굴림', type: 'N' },
+    question: "오늘 WOD에 월워크 100개가 나왔다...",
+    optionA: { text: '헉... 근데 일단 벽 앞에 서봄', type: 'S' },
+    optionB: { text: '100개... 어떻게 쪼갤지 계산기부터 꺼냄', type: 'N' },
   },
   {
     id: 7,
@@ -57,9 +57,9 @@ export const questions: Question[] = [
   },
   {
     id: 10,
-    question: 'WOD 시작 10초 전, 내 머릿속은?',
-    optionA: { text: '일단 빠르게 시작하고 나중에 생각', type: 'S' },
-    optionB: { text: '전체 라운드를 미리 계산하고 페이스 조절', type: 'N' },
+    question: '처음 보는 동작이 WOD에 나왔을 때',
+    optionA: { text: '일단 해보면서 감 잡는다', type: 'S' },
+    optionB: { text: '유튜브 검색부터 한다', type: 'N' },
   },
   {
     id: 11,
@@ -72,5 +72,29 @@ export const questions: Question[] = [
     question: "같이 운동하던 지인이 '크로스핏 대회 나가자' 할 때",
     optionA: { text: 'D-day 잡고 바로 식단이랑 훈련 계획 짬', type: 'J' },
     optionB: { text: '아 ㅋㅋ 생각해볼게~ 하고 흐지부지', type: 'P' },
+  },
+  {
+    id: 13,
+    question: '박스에서 만난 이성이 마음에 들 때 나는?',
+    optionA: { text: '짝 WOD 할 때 슬쩍 옆에 가서 자연스럽게 말 건다', type: 'E' },
+    optionB: { text: '멀리서 훈련하는 모습만 몰래 훔쳐본다', type: 'I' },
+  },
+  {
+    id: 14,
+    question: '박스에 처음 온 사람이 동작을 못 하고 있을 때',
+    optionA: { text: '가서 직접 보여주면서 알려줌', type: 'S' },
+    optionB: { text: '왜 안 되는지 원리부터 설명해줌', type: 'N' },
+  },
+  {
+    id: 15,
+    question: "같이 운동하는 사람이 '나 요즘 기록이 안 늘어...' 할 때",
+    optionA: { text: '프로그램 바꿔보는 건 어때? 볼륨이 부족한 거 아닐까', type: 'T' },
+    optionB: { text: '충분히 잘하고 있어! 슬럼프는 누구나 있는 거야', type: 'F' },
+  },
+  {
+    id: 16,
+    question: '갑자기 우리 박스 회식 자리가 잡혔다!',
+    optionA: { text: '뭐 입고 갈지, 무슨 얘기할지 미리 시뮬레이션 돌림', type: 'J' },
+    optionB: { text: '일단 가서 분위기 보면서 자연스럽게~', type: 'P' },
   },
 ];
