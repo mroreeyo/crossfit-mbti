@@ -4,10 +4,14 @@ import StartQuizButton from '@/components/StartQuizButton';
 export default function Home() {
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center p-6 text-center overflow-hidden">
-      {/* Mobile fallback background */}
-      <div className="landing-bg-fallback" aria-hidden="true" />
+      {/* Mobile fallback background - visible only on mobile */}
+      <div 
+        className="md:hidden absolute inset-0 z-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/videos/landing-bg-poster.webp')" }}
+        aria-hidden="true" 
+      />
       
-      {/* Desktop video */}
+      {/* Desktop video - hidden on mobile via Tailwind */}
       <video
         autoPlay
         loop
@@ -15,10 +19,10 @@ export default function Home() {
         playsInline
         poster="/videos/landing-bg-poster.webp"
         preload="metadata"
-        className="landing-video absolute inset-0 w-full h-full object-cover z-0"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover z-0"
       >
-        <source src="/videos/landing-bg.webm" type="video/webm" media="(min-width: 769px)" />
-        <source src="/videos/landing-bg.mp4" type="video/mp4" media="(min-width: 769px)" />
+        <source src="/videos/landing-bg.webm" type="video/webm" />
+        <source src="/videos/landing-bg.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-black/50 z-10" />
