@@ -16,8 +16,8 @@ export const questions: Question[] = [
   {
     id: 3,
     question: '팀 WOD에서 옆 사람이 죽어갈 때 나는?',
-    optionA: { text: '"3라운드 남았어, 여기서 끊지 마!" 논리적으로 독려', type: 'T' },
-    optionB: { text: '말없이 옆에서 같이 뛰어줌', type: 'F' },
+    optionA: { text: '"몇 개 남았어! 여기서 끊지 마!" 갯수 세주며 독려', type: 'T' },
+    optionB: { text: '헉헉.. 갯수 세줄 힘도 없다며 같이 쓰러짐', type: 'F' },
   },
   {
     id: 4,
@@ -65,7 +65,7 @@ export const questions: Question[] = [
     id: 11,
     question: "코치가 '그 자세 아닌데' 할 때",
     optionA: { text: '왜 안 되는지 해부학적으로 이해해야 함', type: 'T' },
-    optionB: { text: '코치님 눈빛만 봐도 바로 자세 고침', type: 'F' },
+    optionB: { text: '다른 사람들 자세 보고 따라하기', type: 'F' },
   },
   {
     id: 12,
@@ -76,14 +76,14 @@ export const questions: Question[] = [
   {
     id: 13,
     question: '박스에서 만난 이성이 마음에 들 때 나는?',
-    optionA: { text: '짝 WOD 할 때 슬쩍 옆에 가서 자연스럽게 말 건다', type: 'E' },
+    optionA: { text: '은근슬쩍 옆에 가서 자연스럽게 말 건다', type: 'E' },
     optionB: { text: '멀리서 훈련하는 모습만 몰래 훔쳐본다', type: 'I' },
   },
   {
     id: 14,
     question: '박스에 처음 온 사람이 동작을 못 하고 있을 때',
-    optionA: { text: '가서 직접 보여주면서 알려줌', type: 'S' },
-    optionB: { text: '왜 안 되는지 원리부터 설명해줌', type: 'N' },
+    optionA: { text: '저거 아닌데... 라고 속으로만 생각하기', type: 'S' },
+    optionB: { text: '가서 직접 보여주면서 원리까지 설명해줌', type: 'N' },
   },
   {
     id: 15,
@@ -95,6 +95,6 @@ export const questions: Question[] = [
     id: 16,
     question: '갑자기 우리 박스 회식 자리가 잡혔다!',
     optionA: { text: '뭐 입고 갈지, 무슨 얘기할지 미리 시뮬레이션 돌림', type: 'J' },
-    optionB: { text: '일단 가서 분위기 보면서 자연스럽게~', type: 'P' },
+    optionB: { text: '아 나 낯가리는데 어떡하지... 라며 망설임', type: 'P' },
   },
 ];
