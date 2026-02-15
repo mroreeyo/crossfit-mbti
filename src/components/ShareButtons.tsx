@@ -107,22 +107,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
     }
   }, [resultCardRef, showToast]);
 
-  const handleInstagram = useCallback(async () => {
-    trackShareClick('instagram');
-    if (!resultCardRef.current) {
-      showToast('이미지를 저장할 수 없어요. 다시 시도해주세요.');
-      return;
-    }
-
-    try {
-      await captureResultCard(resultCardRef.current);
-      showToast('인스타 스토리에 공유해보세요!');
-    } catch (error) {
-      const message = error instanceof Error ? error.message : '이미지 저장에 실패했어요.';
-      showToast(message);
-    }
-  }, [resultCardRef, showToast]);
-
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-3">
@@ -162,15 +146,6 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
         >
           <span aria-hidden>📸</span>
           <span>이미지</span>
-        </button>
-
-        <button
-          type="button"
-          onClick={handleInstagram}
-          className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
-        >
-          <span aria-hidden>📷</span>
-          <span>인스타</span>
         </button>
       </div>
 
