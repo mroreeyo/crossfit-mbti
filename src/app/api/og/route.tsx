@@ -1,10 +1,7 @@
-import { ImageResponse } from '@vercel/og';
+import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
 
 export const runtime = 'edge';
-
-// 한글 폰트는 Google Fonts에서 동적으로 fetch
-// Noto Sans KR은 크기가 크므로 Google Fonts API에서 서브셋을 가져옴
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
@@ -33,17 +30,6 @@ export async function GET(request: NextRequest) {
 
   const data = typeData[type];
 
-  // 한글 폰트 로드 (Google Fonts에서 Noto Sans KR)
-  let fontData: ArrayBuffer | undefined;
-  try {
-    const fontResponse = await fetch(
-      'https://fonts.gstatic.com/s/notosanskr/v36/PbyxFmXiEBPT4ITbgNA5Cgms3VYcOA-vvnIzzuoyeLTq8H4hfeE.woff'
-    );
-    fontData = await fontResponse.arrayBuffer();
-  } catch {
-    // 폰트 로드 실패 시 기본 폰트 사용
-  }
-
   // 유효하지 않은 유형이면 기본 OG 이미지
   if (!data) {
     return new ImageResponse(
@@ -58,14 +44,14 @@ export async function GET(request: NextRequest) {
             height: '100%',
             backgroundColor: '#f8fafc',
             color: '#1e293b',
-            fontFamily: '"Noto Sans KR", sans-serif',
+            fontFamily: 'sans-serif',
           }}
         >
-          <div style={{ fontSize: 80, marginBottom: 20 }}>🏋️‍♂️</div>
-          <div style={{ fontSize: 48, fontWeight: 'bold', marginBottom: 16 }}>
+          <div style={{ display: 'flex', fontSize: 80, marginBottom: 20 }}>🏋️‍♂️</div>
+          <div style={{ display: 'flex', fontSize: 48, fontWeight: 'bold', marginBottom: 16 }}>
             나의 크로스핏 MBTI는?
           </div>
-          <div style={{ fontSize: 24, color: '#64748b' }}>
+          <div style={{ display: 'flex', fontSize: 24, color: '#64748b' }}>
             16가지 질문으로 알아보는 나만의 크로스핏 MBTI
           </div>
         </div>
@@ -73,18 +59,6 @@ export async function GET(request: NextRequest) {
       {
         width: 1200,
         height: 630,
-        ...(fontData
-          ? {
-              fonts: [
-                {
-                  name: 'Noto Sans KR',
-                  data: fontData,
-                  style: 'normal',
-                  weight: 700,
-                },
-              ],
-            }
-          : {}),
       }
     );
   }
@@ -101,13 +75,14 @@ export async function GET(request: NextRequest) {
           height: '100%',
           backgroundColor: '#f8fafc',
           color: '#1e293b',
-          fontFamily: '"Noto Sans KR", sans-serif',
+          fontFamily: 'sans-serif',
           position: 'relative',
         }}
       >
         {/* 배경 장식 */}
         <div
           style={{
+            display: 'flex',
             position: 'absolute',
             top: -100,
             right: -100,
@@ -119,14 +94,14 @@ export async function GET(request: NextRequest) {
           }}
         />
 
-        <div style={{ fontSize: 100, marginBottom: 20 }}>{data.emoji}</div>
-        <div style={{ fontSize: 72, fontWeight: 'bold', color: data.color, marginBottom: 8 }}>
+        <div style={{ display: 'flex', fontSize: 100, marginBottom: 20 }}>{data.emoji}</div>
+        <div style={{ display: 'flex', fontSize: 72, fontWeight: 'bold', color: data.color, marginBottom: 8 }}>
           {type}
         </div>
-        <div style={{ fontSize: 36, fontWeight: 'bold', marginBottom: 32 }}>
+        <div style={{ display: 'flex', fontSize: 36, fontWeight: 'bold', marginBottom: 32 }}>
           &quot;{data.nickname}&quot;
         </div>
-        <div style={{ fontSize: 20, color: '#64748b' }}>
+        <div style={{ display: 'flex', fontSize: 20, color: '#64748b' }}>
           나의 크로스핏 MBTI는? | crossfit-mbti.vercel.app
         </div>
       </div>
@@ -134,18 +109,6 @@ export async function GET(request: NextRequest) {
     {
       width: 1200,
       height: 630,
-      ...(fontData
-        ? {
-            fonts: [
-              {
-                name: 'Noto Sans KR',
-                data: fontData,
-                style: 'normal',
-                weight: 700,
-              },
-            ],
-          }
-        : {}),
     }
   );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Question, MBTIAxis } from '@/types';
 import { motion } from 'framer-motion';
 
@@ -15,83 +15,9 @@ const EMOJI_QUESTIONS: Record<number, { a: string; b: string }> = {
   6: { a: '😤', b: '😵‍💫' },
 };
 
-const SLIDER_QUESTIONS: Record<number, { leftLabel: string; leftEmoji: string; rightLabel: string; rightEmoji: string }> = {
-  9: { leftLabel: '수다 존', leftEmoji: '🗣️', rightLabel: '혼자 존', rightEmoji: '🎧' },
-};
 
 export default function QuizCard({ question, onAnswer, disabled }: QuizCardProps) {
-  const [sliderValue, setSliderValue] = useState(50);
-
-  // Reset slider when question changes
-  useEffect(() => {
-    setSliderValue(50);
-  }, [question.id]);
-
-  const handleSliderConfirm = () => {
-    // < 50 is Option A (E), >= 50 is Option B (I)
-    const selectedType = sliderValue < 50 ? question.optionA.type : question.optionB.type;
-    onAnswer(selectedType);
-  };
-
   const emojiData = EMOJI_QUESTIONS[question.id];
-  const sliderData = SLIDER_QUESTIONS[question.id];
-
-  if (sliderData) {
-    return (
-      <div className="w-full max-w-2xl mx-auto">
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 md:p-10 shadow-xl mb-8">
-          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-8 leading-relaxed text-center">
-            Q{question.id}. {question.question}
-          </h2>
-
-          <div className="space-y-8 py-4">
-            <div className="flex justify-between items-center text-lg font-medium text-gray-600 px-2">
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-4xl">{sliderData.leftEmoji}</span>
-                <span>{sliderData.leftLabel}</span>
-              </div>
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-4xl">{sliderData.rightEmoji}</span>
-                <span>{sliderData.rightLabel}</span>
-              </div>
-            </div>
-
-            <div className="relative w-full h-12 flex items-center">
-              <input
-                type="range"
-                min="0"
-                max="100"
-                value={sliderValue}
-                onChange={(e) => setSliderValue(Number(e.target.value))}
-                disabled={disabled}
-                className="w-full h-4 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-emerald-500 hover:accent-pink-500 transition-colors"
-              />
-            </div>
-
-            <div className="text-center text-gray-500 text-sm">
-              {sliderValue < 50 ? question.optionA.text : question.optionB.text}
-            </div>
-
-            <motion.button
-              onClick={handleSliderConfirm}
-              disabled={disabled}
-              whileHover={!disabled ? { scale: 1.05 } : {}}
-              whileTap={!disabled ? { scale: 0.95 } : {}}
-              className={`
-                w-full py-4 rounded-xl font-bold text-lg transition-all duration-200
-                ${disabled 
-                  ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-                  : 'bg-emerald-500 text-white hover:bg-pink-500 hover:text-white shadow-lg hover:shadow-pink-500/30'
-                }
-              `}
-            >
-              선택하기
-            </motion.button>
-          </div>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="w-full max-w-2xl mx-auto">

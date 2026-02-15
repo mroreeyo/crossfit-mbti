@@ -65,9 +65,9 @@ export default function QuizPage() {
 
       if (nextIndex === 4 || nextIndex === 8 || nextIndex === 12) {
         const feedbacks = {
-          4: { emoji: '🏋️', title: '1라운드 클리어!', subtitle: '벌써 감이 오는데... 당신, 혹시 AMRAP 좋아해요?' },
-          8: { emoji: '🔥', title: '2라운드 클리어!', subtitle: '지금까지 보면... 당신 박스에서 꽤 존재감 있는 편?' },
-          12: { emoji: '💪', title: '파이널 라운드!', subtitle: '마지막 4문항! 끝까지 가보자고 🔥' },
+          4: { emoji: '🏋️', title: '슬슬 보이는데?', subtitle: '벌써 4개 완료! 슬슬 당신의 유형이 보여요 👀' },
+          8: { emoji: '🔥', title: '절반 넘었어!', subtitle: '여기까지 온 당신, 끈기 있는 타입인 거 확실하네요' },
+          12: { emoji: '💪', title: '거의 다 왔어!', subtitle: '마지막 4문항만 남았어요! 끝까지 가보자고 🔥' },
         };
         setFeedbackData(feedbacks[nextIndex as keyof typeof feedbacks]);
         setShowFeedback(true);
