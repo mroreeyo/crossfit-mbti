@@ -11,7 +11,6 @@ interface QuizCardProps {
 }
 
 const EMOJI_QUESTIONS: Record<number, { a: string; b: string }> = {
-  2: { a: '💪', b: '🧐' },
   6: { a: '😤', b: '😵‍💫' },
 };
 

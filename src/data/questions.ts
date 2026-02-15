@@ -3,15 +3,15 @@ import { Question } from '@/types';
 export const questions: Question[] = [
   {
     id: 1,
-    question: '워밍업 시간, 나는?',
-    optionA: { text: '옆 사람이랑 수다 떨면서 스트레칭', type: 'E' },
-    optionB: { text: '구석에서 혼자 폼롤러 굴리는 중', type: 'I' },
+    question: '크로스핏을 시작하게 된 계기는?',
+    optionA: { text: '체력/건강 같은 확실한 목표가 있어서', type: 'S' },
+    optionB: { text: '뭔가 새로운 거 해보고 싶어서', type: 'N' },
   },
   {
     id: 2,
-    question: "코치가 '오늘 스내치 합니다' 했을 때",
-    optionA: { text: '일단 바벨 잡고 몸으로 부딪혀봄', type: 'S' },
-    optionB: { text: '코치님 궤적 하나하나 뇌에 저장 중', type: 'N' },
+    question: '워밍업 시간, 나는?',
+    optionA: { text: '옆 사람이랑 수다 떨면서 스트레칭', type: 'E' },
+    optionB: { text: '구석에서 혼자 폼롤러 굴리는 중', type: 'I' },
   },
   {
     id: 3,
