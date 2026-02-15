@@ -17,7 +17,7 @@ export const questions: Question[] = [
     id: 3,
     question: '팀 WOD에서 옆 사람이 죽어갈 때 나는?',
     optionA: { text: '"몇 개 남았어! 여기서 끊지 마!" 갯수 세주며 독려', type: 'T' },
-    optionB: { text: '헉헉.. 갯수 세줄 힘도 없다며 같이 쓰러짐', type: 'F' },
+    optionB: { text: '헉헉.. 갯수 세줄 힘도 없다며 쓰러져있음', type: 'F' },
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ export const questions: Question[] = [
     id: 5,
     question: '드디어 자기 기록 갱신!! 나는?',
     optionA: { text: '박스 떠나가라 소리 지르고 인스타 박제', type: 'E' },
-    optionB: { text: '조용히 칠판에 적고 혼자 흐뭇', type: 'I' },
+    optionB: { text: '속으로 뿌듯하면서 폰에 조용히 기록', type: 'I' },
   },
   {
     id: 6,
@@ -45,7 +45,7 @@ export const questions: Question[] = [
   },
   {
     id: 8,
-    question: '알람 울렸는데 오늘 WOD가 쓰러스터...',
+    question: '오늘 WOD를 봤는데 쓰러스터와 버피가 공존하는걸 목격함...',
     optionA: { text: '쓰러스터든 뭐든 일단 박스로 출발', type: 'J' },
     optionB: { text: '이건 신의 계시다, 오늘은 휴식', type: 'P' },
   },
@@ -64,8 +64,8 @@ export const questions: Question[] = [
   {
     id: 11,
     question: "코치가 '그 자세 아닌데' 할 때",
-    optionA: { text: '왜 안 되는지 해부학적으로 이해해야 함', type: 'T' },
-    optionB: { text: '다른 사람들 자세 보고 따라하기', type: 'F' },
+    optionA: { text: '어떤 부분이 틀렸는지 코치한테 다시 물어봄', type: 'T' },
+    optionB: { text: '괜히 쭈뼛쭈뼛해지면서 고침', type: 'F' },
   },
   {
     id: 12,
