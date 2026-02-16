@@ -14,11 +14,17 @@ export function isKakaoAvailable(): boolean {
 }
 
 export function shareToKakao(type: string, nickname: string, siteUrl: string): void {
-  if (!isKakaoAvailable()) {
-    // eslint-disable-next-line no-console
-    console.warn('Kakao SDK not available');
+  if (typeof window === 'undefined' || !window.Kakao) {
     return;
   }
+
+  const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+  if (!kakaoKey) return;
+
+  if (window.Kakao.isInitialized()) {
+    window.Kakao.cleanup();
+  }
+  window.Kakao.init(kakaoKey);
 
   window.Kakao.Share.sendDefault({
     objectType: 'feed',
