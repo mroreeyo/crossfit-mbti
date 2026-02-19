@@ -19,7 +19,9 @@ export function shareToKakao(type: string, nickname: string, siteUrl: string): v
   }
 
   const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY?.trim();
+  const normalizedSiteUrl = siteUrl.trim();
   if (!kakaoKey) return;
+  if (!normalizedSiteUrl) return;
 
   if (window.Kakao.isInitialized()) {
     window.Kakao.cleanup();
@@ -28,21 +30,21 @@ export function shareToKakao(type: string, nickname: string, siteUrl: string): v
 
   window.Kakao.Share.sendDefault({
     objectType: 'feed',
-    content: {
+    content: { 
       title: `나의 크로스핏 MBTI: ${type} - ${nickname}`,
       description: '크로스핏 할 때 나는 어떤 유형? 지금 테스트 해보세요!',
-      imageUrl: `${siteUrl}/api/og?type=${type}`,
+      imageUrl: `${normalizedSiteUrl}/api/og?type=${type}`,
       link: {
-        mobileWebUrl: `${siteUrl}/result/${type}`,
-        webUrl: `${siteUrl}/result/${type}`,
+        mobileWebUrl: `${normalizedSiteUrl}/result/${type}`,
+        webUrl: `${normalizedSiteUrl}/result/${type}`,
       },
     },
     buttons: [
       {
         title: '나도 테스트하기',
         link: {
-          mobileWebUrl: siteUrl,
-          webUrl: siteUrl,
+          mobileWebUrl: normalizedSiteUrl,
+          webUrl: normalizedSiteUrl,
         },
       },
     ],

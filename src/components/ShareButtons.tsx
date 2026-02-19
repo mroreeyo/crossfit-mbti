@@ -19,9 +19,9 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
   const [isToastVisible, setIsToastVisible] = useState(false);
 
   const siteUrl = useMemo(() => {
-    const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL;
+    const envSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
     if (envSiteUrl) return envSiteUrl;
-    if (typeof window !== 'undefined') return window.location.origin;
+    if (typeof window !== 'undefined') return window.location.origin.trim();
     return '';
   }, []);
 
