@@ -26,10 +26,11 @@ const TypeStats: React.FC<TypeStatsProps> = ({ currentType }) => {
 
   useEffect(() => {
     let cancelled = false;
+    let refreshTimer: number | undefined;
 
-    const run = async () => {
+    const run = async (showLoadingState: boolean) => {
       try {
-        setIsLoading(true);
+        if (showLoadingState) setIsLoading(true);
         const res = await fetch('/api/stats', { cache: 'no-store' });
         if (!res.ok) throw new Error('Failed to fetch stats');
         const json = (await res.json()) as StatsResponse;
@@ -43,13 +44,28 @@ const TypeStats: React.FC<TypeStatsProps> = ({ currentType }) => {
           });
         }
       } finally {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled && showLoadingState) setIsLoading(false);
       }
     };
 
-    void run();
+    const handleWindowVisible = () => {
+      if (document.visibilityState === 'visible') {
+        void run(false);
+      }
+    };
+
+    void run(true);
+    // Run one follow-up fetch so a just-saved result appears quickly.
+    refreshTimer = window.setTimeout(() => {
+      void run(false);
+    }, 1500);
+    window.addEventListener('focus', handleWindowVisible);
+    document.addEventListener('visibilitychange', handleWindowVisible);
     return () => {
       cancelled = true;
+      if (refreshTimer) window.clearTimeout(refreshTimer);
+      window.removeEventListener('focus', handleWindowVisible);
+      document.removeEventListener('visibilitychange', handleWindowVisible);
     };
   }, []);
 

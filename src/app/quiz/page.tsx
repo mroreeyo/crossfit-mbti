@@ -83,9 +83,9 @@ export default function QuizPage() {
     }, 300);
   }, [answerQuestion, currentQuestionIndex, isTransitioning, showFeedback]);
 
-  const handleLoadingComplete = useCallback(() => {
+  const handleLoadingComplete = useCallback(async () => {
     const resultType = calculateResult();
-    void saveQuizResult(resultType); // fire-and-forget
+    await saveQuizResult(resultType);
     trackQuizComplete(resultType);
     router.push(`/result/${resultType}`);
   }, [calculateResult, router]);

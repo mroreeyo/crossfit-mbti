@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server';
 
 import { supabase } from '@/lib/supabase';
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 interface TypeCount {
   type: string;
   count: number;
@@ -68,11 +71,15 @@ const buildMockStats = (): StatsResponse => {
   };
 };
 
+const NO_STORE_HEADERS = {
+  'Cache-Control': 'no-store, no-cache, must-revalidate',
+};
+
 export async function GET() {
   const mock = buildMockStats();
 
   if (!supabase) {
-    return NextResponse.json(mock);
+    return NextResponse.json(mock, { headers: NO_STORE_HEADERS });
   }
 
   try {
@@ -112,10 +119,10 @@ export async function GET() {
       updatedAt: new Date().toISOString(),
     };
 
-    return NextResponse.json(response);
+    return NextResponse.json(response, { headers: NO_STORE_HEADERS });
   } catch (error: unknown) {
     // eslint-disable-next-line no-console
     console.error('Stats API failed; falling back to mock data:', error);
-    return NextResponse.json(mock);
+    return NextResponse.json(mock, { headers: NO_STORE_HEADERS });
   }
 }
