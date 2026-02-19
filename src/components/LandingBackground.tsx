@@ -40,7 +40,7 @@ export default function LandingBackground() {
       preload="auto"
       className="absolute inset-0 w-full h-full object-cover z-0"
     >
-      <source src="/videos/landing-bg.mp4" type="video/mp4" />
+      <source src="/videos/landing-bg.webm" type="video/webm" />
     </video>
   );
 }
