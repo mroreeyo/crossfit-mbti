@@ -29,13 +29,13 @@ export const metadata: Metadata = {
     url: siteUrl,
     type: 'website',
     locale: 'ko_KR',
-    images: ['/api/og'],
+    images: ['/logo.png'],
   },
   twitter: {
     card: 'summary_large_image',
     title: '나의 크로스핏 MBTI 테스트',
     description: '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
-    images: ['/api/og'],
+    images: ['/logo.png'],
   },
 };
 
