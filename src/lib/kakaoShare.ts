@@ -18,7 +18,7 @@ export function shareToKakao(type: string, nickname: string, siteUrl: string): v
     return;
   }
 
-  const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+  const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY?.trim();
   if (!kakaoKey) return;
 
   if (window.Kakao.isInitialized()) {

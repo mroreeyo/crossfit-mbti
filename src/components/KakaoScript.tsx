@@ -18,7 +18,7 @@ export default function KakaoScript() {
         const kakao = (window as unknown as { Kakao?: KakaoSdk }).Kakao;
         if (!kakao || kakao.isInitialized()) return;
 
-        const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
+        const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY?.trim();
         if (!kakaoKey || kakaoKey === 'mock_kakao_key') return;
 
         kakao.init(kakaoKey);
