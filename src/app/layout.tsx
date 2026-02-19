@@ -9,26 +9,33 @@ const notoSansKr = Noto_Sans_KR({
   weight: ['400', '700'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000';
+function getSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) return process.env.NEXT_PUBLIC_SITE_URL;
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}`;
+  return 'http://localhost:3000';
+}
+
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   title: '나의 크로스핏 MBTI 테스트 | 크로스핏 유형 찾기',
   description:
     '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형! 친구와 함께 테스트하고 결과를 공유해보세요.',
   keywords: ['크로스핏', 'MBTI', '테스트', '크로스핏MBTI', 'WOD', '성격유형'],
+  metadataBase: new URL(siteUrl),
   openGraph: {
     title: '나의 크로스핏 MBTI 테스트',
     description: '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
     url: siteUrl,
     type: 'website',
     locale: 'ko_KR',
-    images: [`${siteUrl}/api/og`],
+    images: ['/api/og'],
   },
   twitter: {
     card: 'summary_large_image',
     title: '나의 크로스핏 MBTI 테스트',
     description: '16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!',
-    images: [`${siteUrl}/api/og`],
+    images: ['/api/og'],
   },
 };
 
