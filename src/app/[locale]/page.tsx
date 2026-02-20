@@ -1,8 +1,19 @@
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import ParticipantCounter from '@/components/ParticipantCounter';
 import StartQuizButton from '@/components/StartQuizButton';
 import LandingBackground from '@/components/LandingBackground';
 
-export default function Home() {
+type Props = {
+  params: Promise<{ locale: string }>;
+};
+
+export default async function Home({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  
+  const t = await getTranslations('landing');
+  const commonT = await getTranslations('common');
+
   return (
     <main className="relative flex min-h-screen flex-col items-center justify-center p-6 text-center overflow-hidden">
       <LandingBackground />
@@ -12,18 +23,18 @@ export default function Home() {
       <div className="relative z-20 max-w-lg w-full flex flex-col items-center">
         <div className="text-6xl mb-6 animate-fadeInDown">
           <div className="animate-bounceY">
-            🏋️‍♂️
+            {commonT('heroEmoji')}
           </div>
         </div>
         
         <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight text-white animate-fadeInUp delay-200">
-          크로스핏 할 때<br />
-          나는 <span className="text-emerald-400">어떤 유형</span>일까?
+          {t.rich('heroTitle', {
+            highlight: (chunks) => <span className="text-emerald-400">{chunks}</span>,
+          })}
         </h1>
         
         <p className="text-lg text-gray-200 mb-12 animate-fadeInUp delay-400">
-          16가지 질문으로 알아보는<br />
-          나만의 크로스핏 MBTI
+          {t('heroSubtitle')}
         </p>
         
         <div className="w-full flex justify-center animate-scaleIn delay-600">

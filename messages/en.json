@@ -1,0 +1,477 @@
+{
+  "metadata": {
+    "siteTitle": "My CrossFit MBTI Test | Find Your CrossFit Type",
+    "siteDescription": "Discover your CrossFit MBTI type with 16 questions! Take the test with friends and share your results.",
+    "ogTitle": "My CrossFit MBTI Test",
+    "ogDescription": "Discover your CrossFit MBTI type with 16 questions!",
+    "keywords": ["CrossFit", "MBTI", "test", "CrossFit MBTI", "WOD", "personality type"],
+    "resultTitle": "My CrossFit MBTI: {type} - {nickname} 🔥",
+    "resultDescription": "What type am I when doing CrossFit? {description}",
+    "shareDescription": "What type are you when doing CrossFit? Take the test now!",
+    "twitterTitle": "My CrossFit MBTI: {type} - {nickname}",
+    "notFound": "Result not found",
+    "twitterDescription": "Discover your CrossFit MBTI type with 16 questions!",
+    "ogAltText": "{type} - {nickname}"
+  },
+  "landing": {
+    "heroTitle": "What <highlight>type</highlight> am I\nwhen doing CrossFit?",
+    "heroSubtitle": "Discover your CrossFit MBTI\nwith 16 questions",
+    "participantCount": "👥 {count} people have participated!",
+    "beFirstParticipant": "👥 Be the first to participate!"
+  },
+  "common": {
+    "startQuiz": "Start Test",
+    "retake": "Try Again",
+    "progressLabel": "WOD PROGRESS",
+    "heroEmoji": "🏋️‍♂️",
+    "loadingEmoji": "🏋️",
+    "questionPrefix": "Q{id}.",
+    "optionALabel": "A.",
+    "optionBLabel": "B.",
+    "imageDownloadFilename": "crossfit-mbti-result.png"
+  },
+  "mbtiAxes": {
+    "E": "Extraversion",
+    "I": "Introversion",
+    "S": "Sensing",
+    "N": "Intuition",
+    "T": "Thinking",
+    "F": "Feeling",
+    "J": "Judging",
+    "P": "Perceiving"
+  },
+  "quiz": {
+    "feedback4Title": "Getting there!",
+    "feedback4Subtitle": "4 done already! Your type is starting to show 👀",
+    "feedback4Emoji": "🏋️",
+    "feedback8Title": "Over halfway!",
+    "feedback8Subtitle": "You've made it this far — you're definitely the persistent type",
+    "feedback8Emoji": "🔥",
+    "feedback12Title": "Almost done!",
+    "feedback12Subtitle": "Just 4 questions left! Let's finish strong 🔥",
+    "feedback12Emoji": "💪",
+    "loadingTitle": "Analyzing your WOD data... 🔥",
+    "loadingSubtitle": "Calculating your CrossFit personality.\nHang tight!",
+    "bonusQuestion": "🎁 Bonus! Which WOD would you NEVER want to do?",
+    "bonusBadge": "BONUS!",
+    "bonusGirl": "🏋️ Girl WOD (Fran, Grace...)",
+    "bonusHero": "🎖️ Hero WOD (Murph, DT...)",
+    "bonusAmrap": "⏱️ Long AMRAP (20+ min)",
+    "bonusCardio": "🏃 Pure Cardio (running/rowing only)",
+    "bonusGirlLabel": "Girl WOD",
+    "bonusHeroLabel": "Hero WOD",
+    "bonusAmrapLabel": "Long AMRAP",
+    "bonusCardioLabel": "Pure Cardio",
+    "bonusGirlResult": "Girl WOD (Fran, Grace...) — Short but brutal",
+    "bonusHeroResult": "Hero WOD (Murph, DT...) — Never-ending",
+    "bonusAmrapResult": "Long AMRAP (20+ min) — Time stands still",
+    "bonusCardioResult": "Pure Cardio — It's not CrossFit without a barbell"
+  },
+  "result": {
+    "myType": "My CrossFit MBTI is...",
+    "traits": "📌 Traits",
+    "bestMove": "💪 Favorite Movement",
+    "worstMove": "😫 Least Favorite Movement",
+    "bestWOD": "💚 Best WOD",
+    "worstWOD": "🖤 Worst WOD",
+    "neverWOD": "🚫 WOD I'd Never Do",
+    "bestMatch": "💕 Perfect Match",
+    "worstMatch": "💥 Worst Match",
+    "bestMatchEmoji": "💕",
+    "worstMatchEmoji": "💥",
+    "quotedNickname": "\"{nickname}\"",
+    "characterAltText": "{type} - {nickname}",
+    "traitsEmoji": "📌",
+    "bestMoveEmoji": "💪",
+    "worstMoveEmoji": "😫",
+    "bestWODEmoji": "💚",
+    "worstWODEmoji": "🖤",
+    "neverWODEmoji": "🚫"
+  },
+  "stats": {
+    "title": "Top 5 Types",
+    "totalCount": "Total: {count}",
+    "noStats": "Unable to load stats.",
+    "currentLabel": "(you)",
+    "countSuffix": "{count}"
+  },
+  "notFoundPage": {
+    "title": "404",
+    "heading": "Page Not Found",
+    "description": "The page you requested does not exist or you followed an incorrect link.",
+    "homeLink": "Go Home"
+  },
+  "share": {
+    "kakao": "KakaoTalk",
+    "x": "X",
+    "link": "Link",
+    "image": "Image",
+    "xShareText": "My CrossFit MBTI is [{type} - {nickname}]🔥 What did you get?",
+    "linkCopySuccess": "Link copied! 📋",
+    "linkCopyError": "Couldn't create link. Please try again later.",
+    "copyError": "Copy failed. Please copy the link from the address bar.",
+    "imageSaveSuccess": "Image saved! 📸",
+    "imageSaveError": "Couldn't save image. Please try again.",
+    "imageSaveFailure": "Image save failed.",
+    "imageCaptureError": "Image save failed. Please use a screenshot instead!",
+    "kakaoEmoji": "💬",
+    "xEmoji": "𝕏",
+    "linkEmoji": "🔗",
+    "imageEmoji": "📸",
+    "shareLabel": "Share",
+    "kakaoShareImageAlt": "Share on KakaoTalk",
+    "xShareImageAlt": "Share on X"
+  },
+  "kakao": {
+    "shareTitle": "My CrossFit MBTI: {type} - {nickname}",
+    "shareDescription": "What type are you when doing CrossFit? Take the test now!",
+    "buttonTitle": "Take the Test"
+  },
+  "og": {
+    "defaultTitle": "What's Your CrossFit MBTI?",
+    "defaultSubtitle": "Discover your CrossFit MBTI with 16 questions",
+    "footer": "What's Your CrossFit MBTI? | crossfit-mbti.vercel.app",
+    "typeData": {
+      "ISTJ": { "nickname": "The Record Keeper", "emoji": "📊" },
+      "ISFJ": { "nickname": "Box Mom/Dad", "emoji": "🏠" },
+      "INFJ": { "nickname": "CrossFit Philosopher", "emoji": "🧘" },
+      "INTJ": { "nickname": "Strategic Programmer", "emoji": "♟️" },
+      "ISTP": { "nickname": "Silent PR Machine", "emoji": "🛠️" },
+      "ISFP": { "nickname": "Aesthetic CrossFitter", "emoji": "🎨" },
+      "INFP": { "nickname": "Emotional Cheerleader", "emoji": "✨" },
+      "INTP": { "nickname": "Movement Analyst", "emoji": "🧪" },
+      "ESTP": { "nickname": "Spontaneous Muscle-Up Challenger", "emoji": "⚡" },
+      "ESFP": { "nickname": "Box Hype Machine", "emoji": "🥳" },
+      "ENFP": { "nickname": "Passion Overflow", "emoji": "🔥" },
+      "ENTP": { "nickname": "Rule Hacker", "emoji": "💡" },
+      "ESTJ": { "nickname": "WOD Timer Police", "emoji": "👮" },
+      "ESFJ": { "nickname": "Group WOD Organizer", "emoji": "📋" },
+      "ENFJ": { "nickname": "Unofficial Box Coach", "emoji": "📣" },
+      "ENTJ": { "nickname": "CrossFit CEO", "emoji": "👔" }
+    }
+  },
+  "questions": {
+    "q1": {
+      "question": "What got you into CrossFit?",
+      "optionA": "I had a clear goal like fitness or health",
+      "optionB": "I just wanted to try something new",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q2": {
+      "question": "During warm-up, I...",
+      "optionA": "Chat with the person next to me while stretching",
+      "optionB": "Roll out solo in the corner with a foam roller",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q3": {
+      "question": "In a team WOD, when someone next to you is dying...",
+      "optionA": "\"X reps left! Don't stop now!\" — I count and encourage",
+      "optionB": "I'm gasping too hard to even count for them",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q4": {
+      "question": "If you could know tomorrow's WOD in advance...",
+      "optionA": "Of course I'd check and plan my strategy",
+      "optionB": "Not knowing is more fun — I'll see when I get there",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q5": {
+      "question": "You just hit a new PR! You...",
+      "optionA": "Scream so loud the box shakes and post it on Instagram",
+      "optionB": "Feel proud inside and quietly log it on my phone",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q6": {
+      "question": "Today's WOD has 100 wall walks...",
+      "optionA": "Ugh... but I'll just get to the wall and start",
+      "optionB": "100... let me pull out the calculator and figure out sets",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q7": {
+      "question": "When buying CrossFit shoes, I...",
+      "optionA": "Compare grip, cushioning, and every review out there",
+      "optionB": "If the color's nice, I'm sold — just buy it",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q8": {
+      "question": "Today's WOD has thrusters AND burpees...",
+      "optionA": "Thrusters or whatever — heading to the box now",
+      "optionB": "This is a sign from above — today is a rest day",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q9": {
+      "question": "During rest after the WOD, I...",
+      "optionA": "Lie down chatting with the person next to me about how we almost died",
+      "optionB": "Sit in the corner, soul departed, staring at the rower",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q10": {
+      "question": "When a new movement shows up in the WOD...",
+      "optionA": "Just try it and figure it out as I go",
+      "optionB": "YouTube search first",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q11": {
+      "question": "When the coach says 'That form isn't right'...",
+      "optionA": "I ask the coach exactly what's wrong",
+      "optionB": "I get a bit flustered and just try to fix it",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q12": {
+      "question": "A friend says 'Let's sign up for a CrossFit competition!'",
+      "optionA": "Set a date and immediately plan diet and training",
+      "optionB": "Haha sure, I'll think about it~ (and let it fade)",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q13": {
+      "question": "When you're interested in someone at the box...",
+      "optionA": "Casually move closer and strike up a conversation",
+      "optionB": "Watch them train from afar, secretly",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q14": {
+      "question": "A newcomer is struggling with a movement...",
+      "optionA": "Think 'that's not right...' but keep it to myself",
+      "optionB": "Go over and demonstrate while explaining the mechanics",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q15": {
+      "question": "Someone says 'My numbers aren't improving lately...'",
+      "optionA": "How about changing your program? Maybe you need more volume",
+      "optionB": "You're doing great! Everyone hits a plateau sometimes",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q16": {
+      "question": "A surprise box social dinner is announced!",
+      "optionA": "I mentally rehearse what to wear and what to talk about",
+      "optionB": "I'm shy around people... should I even go?",
+      "axisA": "J",
+      "axisB": "P"
+    }
+  },
+  "results": {
+    "ISTJ": {
+      "nickname": "The Record Keeper",
+      "emoji": "📊",
+      "description": "The human database of the box who logs every WOD down to the decimal in spreadsheets or apps. Hates deviating from routine and secretly stresses when equipment isn't put away properly.",
+      "traits": ["5 years of WOD logs on file", "Never changes stretching routine", "Equipment cleanup is MY job"],
+      "bestMove": "Squat",
+      "worstMove": "Burpee",
+      "bestWOD": "Fran (21-15-9, clear structure)",
+      "worstWOD": "30-min AMRAP (no end in sight)",
+      "bestMatch": "ENFP",
+      "worstMatch": "ESFP",
+      "quote": "\"If you didn't log it, it didn't happen.\""
+    },
+    "ISFJ": {
+      "nickname": "Box Mom/Dad",
+      "emoji": "🏠",
+      "description": "The first to approach a nervous newcomer with a warm welcome. Cares more about everyone's safety and the box vibe than their own workout — the guardian angel of the box.",
+      "traits": ["Knows where the first aid kit is", "Remembers every new member's name", "Wipes chalk dust without being asked"],
+      "bestMove": "Deadlift",
+      "worstMove": "Snatch",
+      "bestWOD": "Team WOD (energy of togetherness)",
+      "worstWOD": "1RM Test (heavy and alone)",
+      "bestMatch": "ENTP",
+      "worstMatch": "ENTJ",
+      "quote": "\"Stay safe and have fun, everyone!\""
+    },
+    "INFJ": {
+      "nickname": "CrossFit Philosopher",
+      "emoji": "🧘",
+      "description": "Sees exercise not as mere physical activity but as a journey of self-discovery. Ponders 'Why do I endure this suffering?' mid-WOD and occasionally drops wisdom deeper than the coach's.",
+      "traits": ["Workout journal reads like an essay", "Meditates in the corner of the box", "Asks the coach about the meaning behind movements"],
+      "bestMove": "Clean",
+      "worstMove": "Rowing",
+      "bestWOD": "EMOM (my own rhythm)",
+      "worstWOD": "For Time Sprint (too chaotic)",
+      "bestMatch": "ESTP",
+      "worstMatch": "ESTJ",
+      "quote": "\"Today's pain is tomorrow's enlightenment.\""
+    },
+    "INTJ": {
+      "nickname": "Strategic Programmer",
+      "emoji": "♟️",
+      "description": "Calculates optimal pace and rest intervals the moment the WOD is posted. Plans today's weight by working backward from a competition goal a year away — a true strategist.",
+      "traits": ["Analyzes heart rate graphs", "Critically reviews coach's programming", "Has a separate personal training plan"],
+      "bestMove": "Snatch",
+      "worstMove": "Wall Ball",
+      "bestWOD": "Chipper (requires strategy)",
+      "worstWOD": "AMRAP (mindless repetition)",
+      "bestMatch": "ESFP",
+      "worstMatch": "ENFP",
+      "quote": "\"Efficiency is everything.\""
+    },
+    "ISTP": {
+      "nickname": "Silent PR Machine",
+      "emoji": "🛠️",
+      "description": "Quiet and seemingly indifferent, but eyes light up the moment they grip the barbell. Understands equipment mechanics and handles tools with skill — silently pushing limits while others chat.",
+      "traits": ["Repairs own wrist wraps", "Keeps adding weight without a word", "Disappears coolly after the workout"],
+      "bestMove": "Muscle-Up",
+      "worstMove": "Lunge",
+      "bestWOD": "1RM Deadlift (pure strength)",
+      "worstWOD": "400m Run x 8 (hate running)",
+      "bestMatch": "ENFJ",
+      "worstMatch": "ESFJ",
+      "quote": "\"Less talking, one more rep.\""
+    },
+    "ISFP": {
+      "nickname": "Aesthetic CrossFitter",
+      "emoji": "🎨",
+      "description": "Cares about box lighting, music, and workout outfit coordination as much as performance. Sometimes what matters more than the WOD score is how good the form looked and whether the post-workout selfie turned out.",
+      "traits": ["Knows every new workout apparel drop", "Sensitive about the box playlist", "Post-workout photo master"],
+      "bestMove": "Box Jump",
+      "worstMove": "Thruster",
+      "bestWOD": "Partner WOD (with the right vibe)",
+      "worstWOD": "100 Burpees For Time (zero aesthetics)",
+      "bestMatch": "ENTJ",
+      "worstMatch": "ENTP",
+      "quote": "\"Looking good IS performing good.\""
+    },
+    "INFP": {
+      "nickname": "Emotional Cheerleader",
+      "emoji": "✨",
+      "description": "Deeply moved by the bond with teammates during team WODs. Gets teary-eyed clapping when the last person finishes — a romantic who loves the tight-knit CrossFit community.",
+      "traits": ["Gets emotional after team WODs", "One compliment from the coach = a week of happiness", "Worries about others even mid-workout"],
+      "bestMove": "Rowing",
+      "worstMove": "Deadlift",
+      "bestWOD": "Hero WOD (meaningful workout)",
+      "worstWOD": "Max Effort Clean (too much pressure)",
+      "bestMatch": "ESTJ",
+      "worstMatch": "ESTP",
+      "quote": "\"Our teamwork was truly the best.\""
+    },
+    "INTP": {
+      "nickname": "Movement Analyst",
+      "emoji": "🧪",
+      "description": "Stays up all night studying the physics of Olympic lifts on YouTube. Mentally argues 'Well, anatomically speaking...' when the coach explains, but suffers because their body can't match their theory.",
+      "traits": ["Can recite biomechanics principles", "Studying theory is more fun than working out", "Analyzes specs of every new piece of equipment"],
+      "bestMove": "Handstand Push-Up",
+      "worstMove": "Burpee",
+      "bestWOD": "Snatch Complex (technique-intensive)",
+      "worstWOD": "Running WOD (nothing to analyze)",
+      "bestMatch": "ESFJ",
+      "worstMatch": "ENFJ",
+      "quote": "\"In theory, this should work...\""
+    },
+    "ESTP": {
+      "nickname": "Spontaneous Muscle-Up Challenger",
+      "emoji": "⚡",
+      "description": "Body first, think later. If it looks doable, they try it immediately. Shakes off failure and gets right back up — the most energetic and action-oriented person in the box.",
+      "traits": ["Attempts movements before learning them", "Loves competitive CrossFit bets", "Injury risk #1"],
+      "bestMove": "Clean",
+      "worstMove": "Lunge",
+      "bestWOD": "Sprint WOD (short and explosive)",
+      "worstWOD": "20-min EMOM (way too slow)",
+      "bestMatch": "INFJ",
+      "worstMatch": "INFP",
+      "quote": "\"Can't? Make it happen!\""
+    },
+    "ESFP": {
+      "nickname": "Box Hype Machine",
+      "emoji": "🥳",
+      "description": "Energy never drops from the moment they walk in until they leave. Dances and cracks jokes even during brutal WODs to keep the vibe up — sometimes enjoys the post-workout hangout more than the workout itself.",
+      "traits": ["Controls the box music playlist", "Winks while doing burpees", "Center of all box gossip"],
+      "bestMove": "Burpee",
+      "worstMove": "Rowing",
+      "bestWOD": "Team Competition WOD (festival vibes)",
+      "worstWOD": "Solo 5km Row (lonely and boring)",
+      "bestMatch": "INTJ",
+      "worstMatch": "ISTJ",
+      "quote": "\"If it's not fun, it's not CrossFit!\""
+    },
+    "ENFP": {
+      "nickname": "Passion Overflow",
+      "emoji": "🔥",
+      "description": "Shows up every day with new shoes and gear declaring 'TODAY is my day!' Burns bright and fades fast sometimes, but in that moment, nobody burns hotter — the spark plug of the box.",
+      "traits": ["New shoes every day", "Shares motivational quotes daily", "Has been registered at 3 boxes simultaneously"],
+      "bestMove": "Double-Under",
+      "worstMove": "Thruster",
+      "bestWOD": "Learning new movements day (exciting!)",
+      "worstWOD": "Back Squat 5x5 (repetitive and boring)",
+      "bestMatch": "ISTJ",
+      "worstMatch": "INTJ",
+      "quote": "\"Let's break limits today!\""
+    },
+    "ENTP": {
+      "nickname": "Rule Hacker",
+      "emoji": "💡",
+      "description": "Constantly figuring out how to get more rounds with less effort. Finds loopholes in the rules to create efficient movements and loves debating movement standards with the coach.",
+      "traits": ["Sensitive about No Rep standards", "Master of movement modifications", "Always arguing with the coach"],
+      "bestMove": "Thruster",
+      "worstMove": "Wall Ball",
+      "bestWOD": "Chipper WOD (creative strategy)",
+      "worstWOD": "Tabata Burpees (just grinding)",
+      "bestMatch": "ISFJ",
+      "worstMatch": "ISFP",
+      "quote": "\"Even a No Rep is a strategy.\""
+    },
+    "ESTJ": {
+      "nickname": "WOD Timer Police",
+      "emoji": "👮",
+      "description": "Absolutely will not tolerate fudged round counts or times. Strict with themselves and others — sometimes scarier than the coach when checking rounds. The order keeper of the box.",
+      "traits": ["Counts everyone else's rounds too", "Won't rest until the timer hits zero", "Catches box rule violators"],
+      "bestMove": "Deadlift",
+      "worstMove": "Box Jump",
+      "bestWOD": "Benchmark WOD (clear comparison)",
+      "worstWOD": "Free Programming (no structure!)",
+      "bestMatch": "INFP",
+      "worstMatch": "INFJ",
+      "quote": "\"Let's keep it honest, people.\""
+    },
+    "ESFJ": {
+      "nickname": "Group WOD Organizer",
+      "emoji": "📋",
+      "description": "Better at networking than working out. Handles box dinners, group competition sign-ups, birthday parties — making sure nobody feels left out. The social butterfly of the box.",
+      "traits": ["#1 at booking dinner spots", "Remembers every box member's birthday", "Leads group t-shirt orders"],
+      "bestMove": "Wall Ball",
+      "worstMove": "Handstand Push-Up",
+      "bestWOD": "Partner/Team WOD (everyone together)",
+      "worstWOD": "1RM Test (too individual)",
+      "bestMatch": "INTP",
+      "worstMatch": "ISTP",
+      "quote": "\"Who's down for BBQ after the workout?\""
+    },
+    "ENFJ": {
+      "nickname": "Unofficial Box Coach",
+      "emoji": "📣",
+      "description": "Forgets about their own WOD because they're too busy cheering everyone else on. Has a gift for bringing out people's potential — when they're next to you, it feels like you can lift 20 lbs more.",
+      "traits": ["Voice is always hoarse from cheering", "More excited about others' PRs than their own", "Box atmosphere leader"],
+      "bestMove": "Pull-Up",
+      "worstMove": "Snatch",
+      "bestWOD": "Team AMRAP (cheer and work together)",
+      "worstWOD": "Solo For Time (can't cheer for others)",
+      "bestMatch": "ISTP",
+      "worstMatch": "INTP",
+      "quote": "\"You got this! Just one more!\""
+    },
+    "ENTJ": {
+      "nickname": "CrossFit CEO",
+      "emoji": "👔",
+      "description": "Analyzes the box not just as a gym but as a business model. Points out operational inefficiencies and proposes improvements — secretly dreams of opening their own box someday.",
+      "traits": ["Friends with box management", "Always aims for 1st place in competitions", "Gives orders even during workouts"],
+      "bestMove": "Squat",
+      "worstMove": "Double-Under",
+      "bestWOD": "Competitive WOD (I'm winning this)",
+      "worstWOD": "Long Mobility Session (inefficient)",
+      "bestMatch": "ISFP",
+      "worstMatch": "ISFJ",
+      "quote": "\"This box's ROI needs serious work.\""
+    }
+  }
+}

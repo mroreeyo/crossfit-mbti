@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 interface ParticipantCounterProps {
   count?: number;
 }
 
 export default function ParticipantCounter({ count }: ParticipantCounterProps) {
+  const t = useTranslations('landing');
   const fallbackCount = 0;
   const [participantCount, setParticipantCount] = useState<number>(count ?? fallbackCount);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -43,8 +45,8 @@ export default function ParticipantCounter({ count }: ParticipantCounterProps) {
   return (
     <div className="mt-8 text-sm text-gray-500">
       {participantCount > 0
-        ? `👥 ${participantCount.toLocaleString()}명이 참여했어요!`
-        : '👥 지금 바로 첫 번째 참여자가 되어보세요!'}
+        ? t('participantCount', { count: participantCount.toLocaleString() })
+        : t('beFirstParticipant')}
     </div>
   );
 }

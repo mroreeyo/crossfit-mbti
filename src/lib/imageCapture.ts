@@ -53,7 +53,10 @@ function restoreImages(backups: ImageBackup[]) {
   });
 }
 
-export async function captureResultCard(element: HTMLElement): Promise<void> {
+export async function captureResultCard(
+  element: HTMLElement,
+  errorMessage?: string,
+): Promise<void> {
   // Pre-convert images to data URLs on the ORIGINAL DOM
   // so html2canvas receives plain PNG data URLs (no proxy, no WebP, no CORS).
   const imageBackups = convertImagesToDataUrl(element);
@@ -92,7 +95,7 @@ export async function captureResultCard(element: HTMLElement): Promise<void> {
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Image capture failed:', error);
-    throw new Error('이미지 저장에 실패했어요. 스크린샷을 이용해주세요!');
+    throw new Error(errorMessage ?? 'Image save failed. Please use a screenshot instead!');
   } finally {
     // Always restore original image sources
     restoreImages(imageBackups);
