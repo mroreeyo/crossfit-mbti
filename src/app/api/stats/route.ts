@@ -83,42 +83,28 @@ export async function GET() {
   }
 
   try {
-    const { count, error: countError } = await supabase
-      .from('quiz_results')
-      .select('*', { count: 'exact', head: true });
+    // RPC: DB에서 직접 GROUP BY 집계 (1,000행 limit 문제 해결)
+    const { data: rpcData, error: rpcError } = await supabase
+      .rpc('get_mbti_stats');
 
-    if (countError) throw countError;
-
-    const { data, error: dataError } = await supabase
-      .from('quiz_results')
-      .select('mbti_type');
-
-    if (dataError) throw dataError;
-
+    if (rpcError) throw rpcError;
     const byType = new Map<string, number>();
-    for (const row of data ?? []) {
-      const raw = (row as { mbti_type?: unknown }).mbti_type;
-      if (typeof raw !== 'string') continue;
-      const normalized = raw.trim().toUpperCase();
-      if (!normalized) continue;
-      byType.set(normalized, (byType.get(normalized) ?? 0) + 1);
+    for (const row of rpcData ?? []) {
+      const r = row as { mbti_type: string; count: number };
+      byType.set(r.mbti_type.trim().toUpperCase(), Number(r.count));
     }
-
     const distribution: TypeCount[] = ALL_MBTI_TYPES.map((type) => ({
       type,
       count: byType.get(type) ?? 0,
     }));
 
-    const totalParticipants =
-      count ?? distribution.reduce((sum, item) => sum + item.count, 0);
-
+    const totalParticipants = distribution.reduce((sum, item) => sum + item.count, 0);
     const response: StatsResponse = {
       totalParticipants,
       distribution,
       isMock: false,
       updatedAt: new Date().toISOString(),
     };
-
     return NextResponse.json(response, { headers: NO_STORE_HEADERS });
   } catch (error: unknown) {
     // eslint-disable-next-line no-console
