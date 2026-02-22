@@ -103,7 +103,7 @@ export async function GET() {
       totalParticipants,
       distribution,
       isMock: false,
-      updatedAt: new Date().toISOString(),
+      updatedAt: 'rpc-v2:' + new Date().toISOString(),
     };
     return NextResponse.json(response, { headers: NO_STORE_HEADERS });
   } catch (error: unknown) {
