@@ -1,0 +1,479 @@
+{
+  "metadata": {
+    "siteTitle": "나의 크로스핏 MBTI 테스트 | 크로스핏 유형 찾기",
+    "siteDescription": "16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형! 친구와 함께 테스트하고 결과를 공유해보세요.",
+    "ogTitle": "나의 크로스핏 MBTI 테스트",
+    "ogDescription": "16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!",
+    "keywords": ["크로스핏", "MBTI", "테스트", "크로스핏MBTI", "WOD", "성격유형"],
+    "resultTitle": "나의 크로스핏 MBTI: {type} - {nickname} 🔥",
+    "resultDescription": "크로스핏 할 때 나는 어떤 유형? {description}",
+    "shareDescription": "크로스핏 할 때 나는 어떤 유형? 지금 테스트 해보세요!",
+    "twitterTitle": "나의 크로스핏 MBTI: {type} - {nickname}",
+    "notFound": "결과를 찾을 수 없습니다",
+    "twitterDescription": "16가지 질문으로 알아보는 나만의 크로스핏 MBTI 유형!",
+    "ogAltText": "{type} - {nickname}"
+  },
+  "landing": {
+    "heroTitle": "크로스핏 할 때\n나는 <highlight>어떤 유형</highlight>일까?",
+    "heroSubtitle": "16가지 질문으로 알아보는\n나만의 크로스핏 MBTI",
+    "participantCount": "👥 {count}명이 참여했어요!",
+    "beFirstParticipant": "👥 지금 바로 첫 번째 참여자가 되어보세요!"
+  },
+  "common": {
+    "startQuiz": "테스트 시작하기",
+    "retake": "다시 하기",
+    "progressLabel": "WOD PROGRESS",
+    "heroEmoji": "🏋️‍♂️",
+    "loadingEmoji": "🏋️",
+    "questionPrefix": "Q{id}.",
+    "optionALabel": "A.",
+    "optionBLabel": "B.",
+    "imageDownloadFilename": "crossfit-mbti-result.png"
+  },
+  "mbtiAxes": {
+    "E": "외향",
+    "I": "내향",
+    "S": "감각",
+    "N": "직관",
+    "T": "사고",
+    "F": "감정",
+    "J": "판단",
+    "P": "인식"
+  },
+  "quiz": {
+    "feedback4Title": "슬슬 보이는데?",
+    "feedback4Subtitle": "벌써 4개 완료! 슬슬 당신의 유형이 보여요 👀",
+    "feedback4Emoji": "🏋️",
+    "feedback8Title": "절반 넘었어!",
+    "feedback8Subtitle": "여기까지 온 당신, 끈기 있는 타입인 거 확실하네요",
+    "feedback8Emoji": "🔥",
+    "feedback12Title": "거의 다 왔어!",
+    "feedback12Subtitle": "마지막 4문항만 남았어요! 끝까지 가보자고 🔥",
+    "feedback12Emoji": "💪",
+    "loadingTitle": "WOD 기록 분석 중... 🔥",
+    "loadingSubtitle": "당신의 크로스핏 성향을 계산하고 있습니다.\n잠시만 기다려주세요!",
+    "bonusQuestion": "🎁 보너스! 절대 안 하고 싶은 WOD는?",
+    "bonusBadge": "BONUS!",
+    "bonusGirl": "🏋️ Girl WOD (Fran, Grace...)",
+    "bonusHero": "🎖️ Hero WOD (Murph, DT...)",
+    "bonusAmrap": "⏱️ 긴 AMRAP (20분 이상)",
+    "bonusCardio": "🏃 순수 카디오 (러닝/로잉만)",
+    "bonusGirlLabel": "Girl WOD",
+    "bonusHeroLabel": "Hero WOD",
+    "bonusAmrapLabel": "긴 AMRAP",
+    "bonusCardioLabel": "순수 카디오",
+    "bonusGirlResult": "Girl WOD (Fran, Grace...) — 짧지만 잔인하니까",
+    "bonusHeroResult": "Hero WOD (Murph, DT...) — 끝이 안 보이니까",
+    "bonusAmrapResult": "긴 AMRAP (20분+) — 시계가 안 가니까",
+    "bonusCardioResult": "순수 카디오 — 바벨을 들어야 크로스핏이지"
+  },
+  "result": {
+    "myType": "나의 크로스핏 MBTI는...",
+    "traits": "📌 특징",
+    "bestMove": "💪 좋아하는 동작",
+    "worstMove": "😫 싫어하는 동작",
+    "bestWOD": "💚 찰떡 WOD",
+    "worstWOD": "🖤 지옥 WOD",
+    "neverWOD": "🚫 절대 안 하고 싶은 WOD",
+    "bestMatch": "💕 찰떡궁합",
+    "worstMatch": "💥 환장조합",
+    "bestMatchEmoji": "💕",
+    "worstMatchEmoji": "💥",
+    "quotedNickname": "\"{nickname}\"",
+    "characterAltText": "{type} - {nickname}",
+    "traitsEmoji": "📌",
+    "bestMoveEmoji": "💪",
+    "worstMoveEmoji": "😫",
+    "bestWODEmoji": "💚",
+    "worstWODEmoji": "🖤",
+    "neverWODEmoji": "🚫"
+  },
+  "stats": {
+    "title": "유형별 TOP 5",
+    "totalCount": "총 {count}명",
+    "noStats": "통계를 불러올 수 없어요.",
+    "currentLabel": "(현재)",
+    "countSuffix": "{count}명"
+  },
+  "notFoundPage": {
+    "title": "404",
+    "heading": "페이지를 찾을 수 없습니다",
+    "description": "요청하신 페이지가 존재하지 않거나, 잘못된 경로로 접근하셨습니다.",
+    "homeLink": "홈으로 돌아가기"
+  },
+  "share": {
+    "kakao": "카카오톡",
+    "x": "X",
+    "link": "링크",
+    "image": "이미지",
+    "xShareText": "나의 크로스핏 MBTI는 [{type} - {nickname}]🔥 너는 뭐 나왔어?",
+    "linkCopySuccess": "링크가 복사되었어요! 📋",
+    "linkCopyError": "링크를 만들 수 없어요. 잠시 후 다시 시도해주세요.",
+    "copyError": "복사에 실패했어요. 주소창에서 링크를 복사해주세요.",
+    "imageSaveSuccess": "이미지가 저장되었어요! 📸",
+    "imageSaveError": "이미지를 저장할 수 없어요. 다시 시도해주세요.",
+    "imageSaveFailure": "이미지 저장에 실패했어요.",
+    "imageCaptureError": "이미지 저장에 실패했어요. 스크린샷을 이용해주세요!",
+    "kakaoEmoji": "💬",
+    "xEmoji": "𝕏",
+    "linkEmoji": "🔗",
+    "imageEmoji": "📸",
+    "shareLabel": "공유하기",
+    "kakaoShareImageAlt": "카카오톡 공유",
+    "xShareImageAlt": "X 공유"
+  },
+  "kakao": {
+    "shareTitle": "나의 크로스핏 MBTI: {type} - {nickname}",
+    "shareDescription": "크로스핏 할 때 나는 어떤 유형? 지금 테스트 해보세요!",
+    "buttonTitle": "나도 테스트하기"
+  },
+  "og": {
+    "defaultTitle": "나의 크로스핏 MBTI는?",
+    "defaultSubtitle": "16가지 질문으로 알아보는 나만의 크로스핏 MBTI",
+    "footer": "나의 크로스핏 MBTI는? | crossfit-mbti.vercel.app",
+    "typeData": {
+      "ISTJ": { "nickname": "기록의 신", "emoji": "📊" },
+      "ISFJ": { "nickname": "박스의 엄마/아빠", "emoji": "🏠" },
+      "INFJ": { "nickname": "크로스핏 철학자", "emoji": "🧘" },
+      "INTJ": { "nickname": "전략적 프로그래머", "emoji": "♟️" },
+      "ISTP": { "nickname": "묵묵한 PR 머신", "emoji": "🛠️" },
+      "ISFP": { "nickname": "감성 크로스피터", "emoji": "🎨" },
+      "INFP": { "nickname": "감동 눈물러", "emoji": "✨" },
+      "INTP": { "nickname": "동작 분석가", "emoji": "🧪" },
+      "ESTP": { "nickname": "즉흥 머슬업 도전자", "emoji": "⚡" },
+      "ESFP": { "nickname": "박스 분위기 메이커", "emoji": "🥳" },
+      "ENFP": { "nickname": "열정 오버플로우", "emoji": "🔥" },
+      "ENTP": { "nickname": "규칙 해커", "emoji": "💡" },
+      "ESTJ": { "nickname": "WOD 타이머 경찰", "emoji": "👮" },
+      "ESFJ": { "nickname": "단체 WOD 총무", "emoji": "📋" },
+      "ENFJ": { "nickname": "박스의 코치 (비공식)", "emoji": "📣" },
+      "ENTJ": { "nickname": "크로스핏 대표 CEO", "emoji": "👔" }
+    }
+  },
+  "questions": {
+    "q1": {
+      "question": "크로스핏을 시작하게 된 계기는?",
+      "optionA": "체력/건강 같은 확실한 목표가 있어서",
+      "optionB": "뭔가 새로운 거 해보고 싶어서",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q2": {
+      "question": "워밍업 시간, 나는?",
+      "optionA": "옆 사람이랑 수다 떨면서 스트레칭",
+      "optionB": "구석에서 혼자 폼롤러 굴리는 중",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q3": {
+      "question": "팀 WOD에서 옆 사람이 죽어갈 때 나는?",
+      "optionA": "\"몇 개 남았어! 여기서 끊지 마!\" 갯수 세주며 독려",
+      "optionB": "헉헉.. 갯수 세줄 힘도 없다며 쓰러져있음",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q4": {
+      "question": "내일 WOD가 뭔지 미리 알 수 있다면?",
+      "optionA": "당연히 확인하고 전략 짜놓지",
+      "optionB": "모르는 게 더 재밌어, 가서 보면 됨",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q5": {
+      "question": "드디어 자기 기록 갱신!! 나는?",
+      "optionA": "박스 떠나가라 소리 지르고 인스타 박제",
+      "optionB": "속으로 뿌듯하면서 폰에 조용히 기록",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q6": {
+      "question": "오늘 WOD에 월워크 100개가 나왔다...",
+      "optionA": "헉... 근데 일단 벽 앞에 서봄",
+      "optionB": "100개... 어떻게 쪼갤지 계산기부터 꺼냄",
+      "axisA": "S",
+      "axisB": "N",
+      "emojiA": "😤",
+      "emojiB": "😵‍💫"
+    },
+    "q7": {
+      "question": "크로스핏 운동화 살 때 나는?",
+      "optionA": "접지력, 쿠셔닝, 리뷰 싹 다 비교",
+      "optionB": "색깔 예쁘면 장땡, 일단 결제",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q8": {
+      "question": "오늘 WOD를 봤는데 쓰러스터와 버피가 공존하는걸 목격함...",
+      "optionA": "쓰러스터든 뭐든 일단 박스로 출발",
+      "optionB": "이건 신의 계시다, 오늘은 휴식",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q9": {
+      "question": "WOD 끝나고 쉬는 시간, 나는?",
+      "optionA": "누워서 옆 사람이랑 '오늘 진짜 죽을 뻔' 수다",
+      "optionB": "구석에서 영혼 가출한 채로 로잉 머신만 봄",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q10": {
+      "question": "처음 보는 동작이 WOD에 나왔을 때",
+      "optionA": "일단 해보면서 감 잡는다",
+      "optionB": "유튜브 검색부터 한다",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q11": {
+      "question": "코치가 '그 자세 아닌데' 할 때",
+      "optionA": "어떤 부분이 틀렸는지 코치한테 다시 물어봄",
+      "optionB": "괜히 쭈뼛쭈뼛해지면서 고침",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q12": {
+      "question": "같이 운동하던 지인이 '크로스핏 대회 나가자' 할 때",
+      "optionA": "D-day 잡고 바로 식단이랑 훈련 계획 짬",
+      "optionB": "아 ㅋㅋ 생각해볼게~ 하고 흐지부지",
+      "axisA": "J",
+      "axisB": "P"
+    },
+    "q13": {
+      "question": "박스에서 만난 이성이 마음에 들 때 나는?",
+      "optionA": "은근슬쩍 옆에 가서 자연스럽게 말 건다",
+      "optionB": "멀리서 훈련하는 모습만 몰래 훔쳐본다",
+      "axisA": "E",
+      "axisB": "I"
+    },
+    "q14": {
+      "question": "박스에 처음 온 사람이 동작을 못 하고 있을 때",
+      "optionA": "저거 아닌데... 라고 속으로만 생각하기",
+      "optionB": "가서 직접 보여주면서 원리까지 설명해줌",
+      "axisA": "S",
+      "axisB": "N"
+    },
+    "q15": {
+      "question": "같이 운동하는 사람이 '나 요즘 기록이 안 늘어...' 할 때",
+      "optionA": "프로그램 바꿔보는 건 어때? 볼륨이 부족한 거 아닐까",
+      "optionB": "충분히 잘하고 있어! 슬럼프는 누구나 있는 거야",
+      "axisA": "T",
+      "axisB": "F"
+    },
+    "q16": {
+      "question": "갑자기 우리 박스 회식 자리가 잡혔다!",
+      "optionA": "뭐 입고 갈지, 무슨 얘기할지 미리 시뮬레이션 돌림",
+      "optionB": "아 나 낯가리는데 어떡하지... 라며 망설임",
+      "axisA": "J",
+      "axisB": "P"
+    }
+  },
+  "results": {
+    "ISTJ": {
+      "nickname": "기록의 신",
+      "emoji": "📊",
+      "description": "모든 WOD 기록을 엑셀이나 전용 앱에 소수점 단위까지 기록하는 박스의 인간 데이터베이스입니다. 정해진 루틴에서 벗어나는 것을 싫어하며, 장비 정리 상태가 불량하면 남몰래 스트레스를 받기도 합니다.",
+      "traits": ["WOD 기록 5년치 보유", "스트레칭 루틴 절대 안 바꿈", "장비 정리는 내 손으로"],
+      "bestMove": "스쿼트",
+      "worstMove": "버피",
+      "bestWOD": "Fran (21-15-9, 명확한 구조)",
+      "worstWOD": "AMRAP 30분 (끝이 안 보임)",
+      "bestMatch": "ENFP",
+      "worstMatch": "ESFP",
+      "quote": "\"기록 안 하면 안 한 거야.\""
+    },
+    "ISFJ": {
+      "nickname": "박스의 엄마/아빠",
+      "emoji": "🏠",
+      "description": "새로 온 회원이 쭈뼛거리고 있으면 가장 먼저 다가가 말을 걸어주는 따뜻한 사람입니다. 본인 운동보다 남들이 다치지 않는지, 박스 분위기가 화목한지를 더 신경 쓰는 박스의 수호천사입니다.",
+      "traits": ["구급상자 위치 꿰고 있음", "신규 회원 이름 다 외움", "초크 가루 날리면 닦고 있음"],
+      "bestMove": "데드리프트",
+      "worstMove": "스내치",
+      "bestWOD": "팀 WOD (함께하는 에너지)",
+      "worstWOD": "1RM 테스트 (혼자 무거운 거)",
+      "bestMatch": "ENTP",
+      "worstMatch": "ENTJ",
+      "quote": "\"다들 다치지 말고 파이팅!\""
+    },
+    "INFJ": {
+      "nickname": "크로스핏 철학자",
+      "emoji": "🧘",
+      "description": "운동을 단순한 신체 활동이 아닌 자아 성찰의 과정으로 여깁니다. 힘든 WOD 도중에도 \"나는 왜 이 고통을 감내하는가\"에 대해 깊이 고뇌하며, 가끔은 코치보다 더 심오한 조언을 건네기도 합니다.",
+      "traits": ["운동 일기가 거의 수필 수준", "박스 구석에서 명상함", "동작의 의미를 코치에게 물어봄"],
+      "bestMove": "클린",
+      "worstMove": "로잉",
+      "bestWOD": "EMOM (나만의 리듬)",
+      "worstWOD": "For Time 스프린트 (정신없는)",
+      "bestMatch": "ESTP",
+      "worstMatch": "ESTJ",
+      "quote": "\"오늘의 고통은 내일의 깨달음입니다.\""
+    },
+    "INTJ": {
+      "nickname": "전략적 프로그래머",
+      "emoji": "♟️",
+      "description": "WOD가 공지되자마자 머릿속으로 최적의 페이스와 휴식 시간을 계산합니다. 1년 뒤의 대회 참가를 목표로 역산해서 오늘 들어야 할 무게를 정하는 치밀함을 보여주는 전략가입니다.",
+      "traits": ["심박수 그래프 분석함", "코치 시퀀스 비판적으로 봄", "개인 훈련 계획표가 따로 있음"],
+      "bestMove": "스내치",
+      "worstMove": "월볼",
+      "bestWOD": "Chipper (전략이 필요한)",
+      "worstWOD": "AMRAP (무작정 반복)",
+      "bestMatch": "ESFP",
+      "worstMatch": "ENFP",
+      "quote": "\"효율이 전부다.\""
+    },
+    "ISTP": {
+      "nickname": "묵묵한 PR 머신",
+      "emoji": "🛠️",
+      "description": "말수가 적고 무심해 보이지만, 바벨만 잡으면 눈빛이 변하는 장인입니다. 장비의 원리를 이해하고 도구를 다루는 데 능숙하며, 남들이 수다 떨 때 묵묵히 자신의 한계를 돌파하는 스타일입니다.",
+      "traits": ["손목 보호대 직접 수선함", "말없이 무게 계속 올림", "운동 끝나면 쿨하게 사라짐"],
+      "bestMove": "머슬업",
+      "worstMove": "런지",
+      "bestWOD": "1RM 데드리프트 (순수한 힘)",
+      "worstWOD": "400m 런 x 8 (달리기 싫어)",
+      "bestMatch": "ENFJ",
+      "worstMatch": "ESFJ",
+      "quote": "\"말할 시간에 하나 더 함.\""
+    },
+    "ISFP": {
+      "nickname": "감성 크로스피터",
+      "emoji": "🎨",
+      "description": "운동 성능만큼이나 박스의 조명, 음악, 그리고 자신의 운동복 코디를 중요하게 생각합니다. WOD 결과보다는 오늘 내가 얼마나 멋진 폼으로 운동했는지, 오운완 사진이 잘 나왔는지가 더 중요할 때가 있습니다.",
+      "traits": ["운동복 브랜드 신상 다 앎", "박스 플레이리스트에 민감함", "오운완 사진 장인"],
+      "bestMove": "박스점프",
+      "worstMove": "쓰러스터",
+      "bestWOD": "파트너 WOD (바이브 맞는 사람과)",
+      "worstWOD": "버피 100개 For Time (감성 제로)",
+      "bestMatch": "ENTJ",
+      "worstMatch": "ENTP",
+      "quote": "\"운동도 예쁘게 해야 잘 됨.\""
+    },
+    "INFP": {
+      "nickname": "감동 눈물러",
+      "emoji": "✨",
+      "description": "팀 WOD에서 팀원들과의 유대감에 깊은 감동을 느낍니다. 마지막 주자가 들어올 때 박수치며 눈시울을 붉히기도 하며, 크로스핏 커뮤니티의 끈끈한 정을 사랑하는 낭만주의자입니다.",
+      "traits": ["팀 WOD 끝나고 감동받음", "코치의 칭찬 한마디에 일주일 행복", "운동 중에도 남 걱정함"],
+      "bestMove": "로잉",
+      "worstMove": "데드리프트",
+      "bestWOD": "Hero WOD (의미 있는 운동)",
+      "worstWOD": "Max Effort 클린 (부담 너무 큰)",
+      "bestMatch": "ESTJ",
+      "worstMatch": "ESTP",
+      "quote": "\"우리 팀워크 정말 최고였어요.\""
+    },
+    "INTP": {
+      "nickname": "동작 분석가",
+      "emoji": "🧪",
+      "description": "유튜브에서 역도 동작의 물리적 원리를 밤새 공부하고 옵니다. 코치가 설명할 때 \"그건 해부학적으로...\"라며 속으로 반박하기도 하지만, 정작 본인 몸은 이론만큼 따라주지 않아 괴로워하는 지식인입니다.",
+      "traits": ["역학 원리 줄줄 꿴다", "운동보다 이론 공부가 더 재밌음", "새로운 장비 나오면 스펙 분석"],
+      "bestMove": "핸드스탠드 푸시업",
+      "worstMove": "버피",
+      "bestWOD": "스내치 Complex (기술 집약적)",
+      "worstWOD": "러닝 WOD (분석할 게 없음)",
+      "bestMatch": "ESFJ",
+      "worstMatch": "ENFJ",
+      "quote": "\"이론상으로는 이게 맞는데...\""
+    },
+    "ESTP": {
+      "nickname": "즉흥 머슬업 도전자",
+      "emoji": "⚡",
+      "description": "일단 몸부터 던지고 보는 스타일입니다. \"이거 될 것 같은데?\" 싶으면 바로 시도하며, 실패해도 툭툭 털고 일어나는 강한 멘탈의 소유자입니다. 박스에서 가장 에너지가 넘치고 활동적인 사람입니다.",
+      "traits": ["안 배운 동작도 일단 해봄", "내기 크로스핏 제일 좋아함", "부상 위험 1순위"],
+      "bestMove": "클린",
+      "worstMove": "런지",
+      "bestWOD": "스프린트 WOD (짧고 폭발적)",
+      "worstWOD": "EMOM 20분 (느려 터짐)",
+      "bestMatch": "INFJ",
+      "worstMatch": "INFP",
+      "quote": "\"안 되면 되게 하라!\""
+    },
+    "ESFP": {
+      "nickname": "박스 분위기 메이커",
+      "emoji": "🥳",
+      "description": "박스에 들어오는 순간부터 나가는 순간까지 텐션이 떨어지지 않습니다. 힘든 WOD 중에도 춤을 추거나 농담을 던져 분위기를 띄우며, 운동보다는 운동 후의 친목 도모를 더 즐기기도 합니다.",
+      "traits": ["박스 음악 선곡권 쥐고 있음", "버피 하면서 윙크함", "박스 내 모든 가십의 중심"],
+      "bestMove": "버피",
+      "worstMove": "로잉",
+      "bestWOD": "팀 대회 WOD (축제 분위기)",
+      "worstWOD": "혼자 로잉 5km (외롭고 지루함)",
+      "bestMatch": "INTJ",
+      "worstMatch": "ISTJ",
+      "quote": "\"즐겁지 않으면 크로스핏이 아니지!\""
+    },
+    "ENFP": {
+      "nickname": "열정 오버플로우",
+      "emoji": "🔥",
+      "description": "매일 새로운 운동화와 장비를 장착하고 나타나 \"오늘이야말로 내 인생의 날!\"이라며 외칩니다. 금방 타올랐다 금방 식기도 하지만, 그 순간만큼은 누구보다 뜨거운 열정을 보여주는 박스의 불꽃입니다.",
+      "traits": ["매일 새 운동화 신고 옴", "동기부여 명언 매일 공유", "3개 박스 동시 등록 경험"],
+      "bestMove": "더블언더",
+      "worstMove": "쓰러스터",
+      "bestWOD": "새로운 동작 배우는 날 (설렘!)",
+      "worstWOD": "Back Squat 5x5 (반복 지루)",
+      "bestMatch": "ISTJ",
+      "worstMatch": "INTJ",
+      "quote": "\"오늘도 한계를 돌파합시다!\""
+    },
+    "ENTP": {
+      "nickname": "규칙 해커",
+      "emoji": "💡",
+      "description": "어떻게 하면 더 적은 힘으로 더 많은 라운드를 돌 수 있을지 끊임없이 고민합니다. 규정의 빈틈을 찾아내어 효율적인 동작을 만들어내며, 코치와 동작의 정당성에 대해 토론하는 것을 즐깁니다.",
+      "traits": ["노 렙(No Rep) 기준에 민감함", "동작 변형의 귀재", "코치랑 맨날 말싸움함"],
+      "bestMove": "쓰러스터",
+      "worstMove": "월볼",
+      "bestWOD": "Chipper WOD (창의적 전략)",
+      "worstWOD": "Tabata 버피 (그냥 노가다)",
+      "bestMatch": "ISFJ",
+      "worstMatch": "ISFP",
+      "quote": "\"노 렙(No Rep)도 전략이다.\""
+    },
+    "ESTJ": {
+      "nickname": "WOD 타이머 경찰",
+      "emoji": "👮",
+      "description": "라운드 카운트와 시간을 속이는 것을 절대 용납하지 않습니다. 본인에게도 엄격하지만 남들에게도 엄격하여, 가끔은 코치보다 더 무섭게 라운드를 체크하는 박스의 질서 유지자입니다.",
+      "traits": ["남의 라운드까지 다 셈", "타이머 0초 되기 전엔 안 쉼", "박스 규칙 위반자 적발"],
+      "bestMove": "데드리프트",
+      "worstMove": "박스점프",
+      "bestWOD": "Benchmark WOD (명확한 비교 가능)",
+      "worstWOD": "자유 프로그래밍 (구조가 없잖아)",
+      "bestMatch": "INFP",
+      "worstMatch": "INFJ",
+      "quote": "\"정직하게 합시다, 정직하게.\""
+    },
+    "ESFJ": {
+      "nickname": "단체 WOD 총무",
+      "emoji": "📋",
+      "description": "운동 실력보다 인맥 관리가 더 뛰어납니다. 박스 회식, 대회 단체 신청, 생일 파티 등을 도맡아 하며, 모든 회원이 소외되지 않고 어울릴 수 있도록 세심하게 챙기는 박스의 마당발입니다.",
+      "traits": ["회식 장소 섭외 1등", "박스 경조사 다 챙김", "단체 티셔츠 제작 주도"],
+      "bestMove": "월볼",
+      "worstMove": "핸드스탠드 푸시업",
+      "bestWOD": "파트너/팀 WOD (모두 함께)",
+      "worstWOD": "1RM 테스트 (너무 개인적)",
+      "bestMatch": "INTP",
+      "worstMatch": "ISTP",
+      "quote": "\"운동 끝나고 고기 먹으러 갈 사람?\""
+    },
+    "ENFJ": {
+      "nickname": "박스의 코치 (비공식)",
+      "emoji": "📣",
+      "description": "자신의 WOD는 뒷전이고 옆에서 힘들어하는 사람들을 응원하느라 바쁩니다. 사람들의 잠재력을 끌어올리는 데 탁월한 능력이 있으며, 그가 옆에 있으면 평소보다 10kg은 더 들 수 있을 것 같은 기분이 듭니다.",
+      "traits": ["응원하느라 목이 항상 쉬어있음", "남의 PR에 본인이 더 좋아함", "박스 분위기 리더"],
+      "bestMove": "풀업",
+      "worstMove": "스내치",
+      "bestWOD": "팀 AMRAP (응원하면서 같이)",
+      "worstWOD": "Solo For Time (옆 사람 응원 못 함)",
+      "bestMatch": "ISTP",
+      "worstMatch": "INTP",
+      "quote": "\"할 수 있어요! 한 개만 더!\""
+    },
+    "ENTJ": {
+      "nickname": "크로스핏 대표 CEO",
+      "emoji": "👔",
+      "description": "박스를 단순한 운동 공간이 아닌 하나의 비즈니스 모델로 분석합니다. 박스 운영의 비효율성을 지적하고 개선안을 제안하며, 언젠가는 자신만의 박스를 차리겠다는 야망을 품고 있는 리더입니다.",
+      "traits": ["박스 운영진이랑 친함", "대회 나가면 무조건 1등 목표", "운동 중에도 지시 내림"],
+      "bestMove": "스쿼트",
+      "worstMove": "더블언더",
+      "bestWOD": "경쟁 요소 있는 WOD (1등 할 거야)",
+      "worstWOD": "긴 모빌리티 세션 (비효율적)",
+      "bestMatch": "ISFP",
+      "worstMatch": "ISFJ",
+      "quote": "\"박스 수익성 개선이 시급합니다.\""
+    }
+  }
+}

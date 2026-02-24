@@ -2,12 +2,15 @@
 
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useTranslations } from 'next-intl';
 
 interface LoadingAnimationProps {
   onComplete: () => void;
 }
 
 export default function LoadingAnimation({ onComplete }: LoadingAnimationProps) {
+  const t = useTranslations();
+
   useEffect(() => {
     const timer = setTimeout(() => {
       onComplete();
@@ -25,7 +28,7 @@ export default function LoadingAnimation({ onComplete }: LoadingAnimationProps) 
           animate={{ y: [0, -20, 0] }}
           transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
         >
-          🏋️
+          {t('common.loadingEmoji')}
         </motion.div>
       </div>
       
@@ -34,18 +37,16 @@ export default function LoadingAnimation({ onComplete }: LoadingAnimationProps) 
         animate={{ opacity: [0.5, 1, 0.5] }}
         transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
       >
-        WOD 기록 분석 중... 🔥
+        {t('quiz.loadingTitle')}
       </motion.h2>
       
       <motion.p 
-        className="text-gray-500 text-center max-w-xs mx-auto"
+        className="text-gray-500 text-center max-w-xs mx-auto whitespace-pre-line"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        당신의 크로스핏 성향을 계산하고 있습니다.
-        <br />
-        잠시만 기다려주세요!
+        {t('quiz.loadingSubtitle')}
       </motion.p>
     </div>
   );

@@ -34,3 +34,5 @@ next-env.d.ts
 
 # sisyphus (internal tooling)
 .sisyphus/
+
+.vercel

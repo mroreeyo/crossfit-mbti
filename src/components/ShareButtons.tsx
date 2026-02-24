@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import { useTranslations, useLocale } from 'next-intl';
 
 import { captureResultCard } from '@/lib/imageCapture';
 import { isKakaoAvailable, shareToKakao } from '@/lib/kakaoShare';
@@ -14,6 +15,8 @@ interface ShareButtonsProps {
 }
 
 const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardRef }) => {
+  const t = useTranslations();
+  const locale = useLocale();
   const [isKakaoReady, setIsKakaoReady] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [isToastVisible, setIsToastVisible] = useState(false);
@@ -27,8 +30,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
 
   const resultUrl = useMemo(() => {
     if (!siteUrl) return '';
-    return `${siteUrl}/result/${type}`;
-  }, [siteUrl, type]);
+    return `${siteUrl}/${locale}/result/${type}`;
+  }, [siteUrl, locale, type]);
 
   const showToast = useCallback((message: string) => {
     setToastMessage(message);
@@ -40,6 +43,8 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
   }, []);
 
   useEffect(() => {
+    if (locale !== 'ko') return;
+
     let attempts = 0;
     const maxAttempts = 10; // ~5s (500ms * 10)
 
@@ -59,65 +64,71 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
     }, 500);
 
     return () => window.clearInterval(intervalId);
-  }, []);
+  }, [locale]);
 
   const handleShareToKakao = useCallback(() => {
     trackShareClick('kakao');
-    shareToKakao(type, nickname, siteUrl);
-  }, [nickname, siteUrl, type]);
+    shareToKakao(type, nickname, siteUrl, locale, {
+      title: t('kakao.shareTitle', { type, nickname }),
+      description: t('kakao.shareDescription'),
+      buttonTitle: t('kakao.buttonTitle'),
+    });
+  }, [nickname, siteUrl, type, locale, t]);
 
   const handleShareToX = useCallback(() => {
     trackShareClick('x');
-    const text = `나의 크로스핏 MBTI는 [${type} - ${nickname}]🔥 너는 뭐 나왔어?`;
+    const text = t('share.xShareText', { type, nickname });
     const url = resultUrl || siteUrl;
     const intentUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
     window.open(intentUrl, '_blank', 'noopener,noreferrer');
-  }, [nickname, resultUrl, siteUrl, type]);
+  }, [nickname, resultUrl, siteUrl, type, t]);
 
   const handleCopyLink = useCallback(async () => {
     trackShareClick('link');
     const url = resultUrl || siteUrl;
     if (!url) {
-      showToast('링크를 만들 수 없어요. 잠시 후 다시 시도해주세요.');
+      showToast(t('share.linkCopyError'));
       return;
     }
 
     try {
       await navigator.clipboard.writeText(url);
-      showToast('링크가 복사되었어요! 📋');
+      showToast(t('share.linkCopySuccess'));
     } catch {
-      showToast('복사에 실패했어요. 주소창에서 링크를 복사해주세요.');
+      showToast(t('share.copyError'));
     }
-  }, [resultUrl, showToast, siteUrl]);
+  }, [resultUrl, showToast, siteUrl, t]);
 
   const handleSaveImage = useCallback(async () => {
     trackShareClick('image');
     if (!resultCardRef.current) {
-      showToast('이미지를 저장할 수 없어요. 다시 시도해주세요.');
+      showToast(t('share.imageSaveError'));
       return;
     }
 
     try {
-      await captureResultCard(resultCardRef.current);
+      await captureResultCard(resultCardRef.current, t('share.imageCaptureError'));
       trackImageDownload();
-      showToast('이미지가 저장되었어요! 📸');
+      showToast(t('share.imageSaveSuccess'));
     } catch (error) {
-      const message = error instanceof Error ? error.message : '이미지 저장에 실패했어요.';
+      const message = error instanceof Error
+        ? error.message
+        : t('share.imageSaveFailure');
       showToast(message);
     }
-  }, [resultCardRef, showToast]);
+  }, [resultCardRef, showToast, t]);
 
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-3">
-        {isKakaoReady ? (
+        {locale === 'ko' && isKakaoReady ? (
           <button
             type="button"
             onClick={handleShareToKakao}
             className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
           >
             <span aria-hidden>💬</span>
-            <span>카카오톡</span>
+            <span>{t('share.kakao')}</span>
           </button>
         ) : null}
 
@@ -127,7 +138,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
           className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>𝕏</span>
-          <span>X</span>
+          <span>{t('share.x')}</span>
         </button>
 
         <button
@@ -136,7 +147,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
           className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>🔗</span>
-          <span>링크</span>
+          <span>{t('share.link')}</span>
         </button>
 
         <button
@@ -145,7 +156,7 @@ const ShareButtons: React.FC<ShareButtonsProps> = ({ type, nickname, resultCardR
           className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm text-slate-700 transition hover:border-gray-400 hover:bg-gray-50"
         >
           <span aria-hidden>📸</span>
-          <span>이미지</span>
+          <span>{t('share.image')}</span>
         </button>
       </div>
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { useQuizStore } from '@/stores/quizStore';
 import { questions } from '@/data/questions';
 import QuizCard from '@/components/QuizCard';
@@ -8,13 +8,15 @@ import BonusQuestion from '@/components/BonusQuestion';
 import ProgressBar from '@/components/ProgressBar';
 import LoadingAnimation from '@/components/LoadingAnimation';
 import { useState, useCallback, useEffect } from 'react';
-import { MBTIAxis } from '@/types';
+import { MBTIAxis, Question } from '@/types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { trackQuestionAnswer, trackQuizComplete } from '@/lib/analytics';
 import { saveQuizResult } from '@/lib/supabase';
+import { useTranslations } from 'next-intl';
 
 export default function QuizPage() {
   const router = useRouter();
+  const t = useTranslations();
   const { 
     currentQuestionIndex, 
     answerQuestion, 
@@ -64,10 +66,10 @@ export default function QuizPage() {
       const nextIndex = currentQuestionIndex + 1;
 
       if (nextIndex === 4 || nextIndex === 8 || nextIndex === 12) {
-        const feedbacks = {
-          4: { emoji: '🏋️', title: '슬슬 보이는데?', subtitle: '벌써 4개 완료! 슬슬 당신의 유형이 보여요 👀' },
-          8: { emoji: '🔥', title: '절반 넘었어!', subtitle: '여기까지 온 당신, 끈기 있는 타입인 거 확실하네요' },
-          12: { emoji: '💪', title: '거의 다 왔어!', subtitle: '마지막 4문항만 남았어요! 끝까지 가보자고 🔥' },
+      const feedbacks = {
+          4: { emoji: t('quiz.feedback4Emoji'), title: t('quiz.feedback4Title'), subtitle: t('quiz.feedback4Subtitle') },
+          8: { emoji: t('quiz.feedback8Emoji'), title: t('quiz.feedback8Title'), subtitle: t('quiz.feedback8Subtitle') },
+          12: { emoji: t('quiz.feedback12Emoji'), title: t('quiz.feedback12Title'), subtitle: t('quiz.feedback12Subtitle') },
         };
         setFeedbackData(feedbacks[nextIndex as keyof typeof feedbacks]);
         setShowFeedback(true);
@@ -81,7 +83,7 @@ export default function QuizPage() {
         setIsTransitioning(false);
       }
     }, 300);
-  }, [answerQuestion, currentQuestionIndex, isTransitioning, showFeedback]);
+  }, [answerQuestion, currentQuestionIndex, isTransitioning, showFeedback, t]);
 
   const handleLoadingComplete = useCallback(async () => {
     const resultType = calculateResult();
@@ -100,6 +102,22 @@ export default function QuizPage() {
   if (!currentQuestion && !showBonus && !isCompleted) {
     return null;
   }
+
+  // Hybrid: use translation for display text, keep type from questions.ts for scoring
+  const translatedQuestion: Question | undefined = currentQuestion
+    ? {
+        id: currentQuestion.id,
+        question: t(`questions.q${currentQuestion.id}.question`),
+        optionA: {
+          text: t(`questions.q${currentQuestion.id}.optionA`),
+          type: currentQuestion.optionA.type,
+        },
+        optionB: {
+          text: t(`questions.q${currentQuestion.id}.optionB`),
+          type: currentQuestion.optionB.type,
+        },
+      }
+    : undefined;
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900 flex flex-col items-center justify-center p-4 relative overflow-hidden">
@@ -150,7 +168,7 @@ export default function QuizPage() {
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <QuizCard
-                  question={currentQuestion}
+                  question={translatedQuestion!}
                   onAnswer={handleAnswer}
                   disabled={isTransitioning}
                 />
